@@ -1,0 +1,1418 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  ‎This is file `ABThesis.cls'‎,                                                         %%
+%%  ‎The original file was xepersian-thesis.cls by Vafa Khalighi‎       %%
+%%  ‎The secondary file was VThesis.cls Vahid Damanafshan‎           %%
+%%                                                                                                    %%
+%% ‎_________________________________________________‎ %%
+%%   ‎Copyright © 2011-2017 Abolvafa Buzjani Student's Groups‎   %%
+%%  															   		                  %%
+%%   ‎09365656706										‎	                %%
+%%   ‎texfum@gmail.com‎                                                           %%
+%%   ‎http://forum.parsilatex.com‎ 									  	        %%
+%% 																					        %%
+%% 																						    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ 
+
+
+%                      						      ‎Set Class‎
+
+‎\NeedsTeXFormat{LaTeX2e}‎
+‎\ProvidesClass{ABThesis}‎
+              ‎[10/30/2020 V.1.2.1‎
+ ‎Persian thesis document class in XeLaTeX for University of Mashhad theses/dissertations]‎
+‎%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}‎
+‎%\ProcessOptions‎
+‎\LoadClass[11pt‎, ‎oneside‎, ‎]{book}%openany‎
+‎\RequirePackage{etex}‎
+‎\reserveinserts{28}‎
+
+
+‎%Options‎
+
+
+‎\newif\if@ABfinal‎
+‎%\@finalfalse‎
+‎\DeclareOption{ABfinal}{\@ABfinaltrue}‎
+
+
+‎\newif\if@MScthesis‎
+‎%\@MScthesisfalse‎
+‎\DeclareOption{ABmsc}{\@MScthesistrue}‎
+
+
+
+‎\newif\if@ABgraph‎
+‎%\@ABgraphfalse‎
+‎\DeclareOption{ABgraph}{\@ABgraphtrue}‎
+
+
+‎\newif\if@ABfig‎
+‎%\@ABfigfalse‎
+‎\DeclareOption{ABfig}{\@ABfigtrue}‎
+
+
+‎\newif\if@ABroom‎
+‎%\@ABroomfalse‎
+‎\DeclareOption{ABroom}{\@ABroomtrue}‎
+
+
+‎\newif\if@ABprog‎
+‎%\@ABprogfalse‎
+‎\DeclareOption{ABprog}{\@ABprogtrue}‎
+
+‎\newif\if@ABtab‎
+‎%\@ABtabfalse‎
+‎\DeclareOption{ABtab}{\@ABtabtrue}‎
+
+
+‎\newif\if@ABdraft‎
+‎%\@ABdraftfalse‎
+‎\DeclareOption{ABdraft}{\@ABdrafttrue}‎
+
+
+‎\newif\ifABgls‎
+‎%\ABglsfalse‎
+‎\DeclareOption{ABgls}{\ABglstrue}‎
+
+
+‎\newif\ifABalg‎
+‎%\ABalgfalse‎
+‎\DeclareOption{ABalg}{\ABalgtrue}‎
+
+
+
+‎\newif\ifABpages‎
+‎%\ABpagesfalse‎
+‎\DeclareOption{ABpages}{\ABpagestrue}‎
+
+
+‎\newif\ifABproject‎
+‎%\ABprojectfalse‎
+‎\DeclareOption{ABproject}{\ABprojecttrue}‎
+
+
+‎\newif\ifABbib‎
+‎%\ABbibfalse‎
+‎\DeclareOption{ABbib}{\ABbibtrue}‎
+
+
+‎\newif\ifABnatbib‎
+‎%\ABnatbibfalse‎
+‎\DeclareOption{ABnatbib}{\ABnatbibtrue}‎
+
+
+‎\newif\ifABindex‎
+‎%\ABnatbibfalse‎
+‎\DeclareOption{ABindex}{\ABindextrue}‎
+
+
+‎\ProcessOptions‎
+
+
+
+
+‎\if@ABroom‎
+‎\RequirePackage{morewrites}‎
+‎\else‎
+‎\relax‎
+‎\fi‎
+
+
+
+‎\if@ABdraft‎
+‎\RequirePackage[top=15mm‎, ‎bottom=10mm‎, ‎left=10mm‎, ‎right=10mm]{geometry}‎
+‎\else‎
+‎\RequirePackage[top=40mm‎, ‎bottom=40mm‎, ‎left=25mm‎, ‎right=35mm]{geometry}‎
+‎\fi‎
+
+
+‎\RequirePackage{amsthm‎, ‎amssymb‎, ‎amsmath‎,  ‎setspace }%dsfont‎, ‎bigdelim‎,
+‎\allowdisplaybreaks % break multiline equations at end of page if use‎ "\\" ‎(to break lines) not‎ ‎"\cr"‎
+‎\RequirePackage{graphicx}‎
+‎\graphicspath{{fig/}}‎
+‎\RequirePackage{rotating}‎
+‎\RequirePackage{subfig}‎
+‎\RequirePackage{hyperref}‎
+‎\hypersetup{pdfmenubar=true‎, ‎pdfstartview=FitH‎, ‎pdfpagemode=FullScreen‎, ‎colorlinks=true‎, ‎linkcolor=blue‎, ‎anchorcolor=green‎, ‎citecolor=blue‎, ‎urlcolor=cyan‎, ‎filecolor=magenta‎, ‎pdftoolbar=true‎, ‎pdfpagemode=UseOutlines}‎
+‎\RequirePackage{fancyhdr}‎
+‎\RequirePackage{multicol}‎
+‎\RequirePackage{enumerate}‎
+‎\RequirePackage{comment}‎
+‎\RequirePackage{framed}‎ 
+‎\RequirePackage[all]{xy}‎
+‎\RequirePackage{mathrsfs‎, ‎fancybox}‎
+‎\RequirePackage{picinpar}‎
+‎\RequirePackage{shapepar}‎
+‎\RequirePackage{float}‎
+‎%\RequirePackage[perpage]{footmisc}‎
+‎%\RequirePackage{perpage}‎
+‎%\MakePerPage{footnote}‎
+‎\RequirePackage{zref-perpage}‎
+‎\zmakeperpage{footnote}‎ 
+‎\RequirePackage[xindy]{glossaries}‎
+‎\RequirePackage{makeidx}‎
+‎\makeindex‎
+
+
+‎\ifABnatbib‎
+‎\RequirePackage[nonamebreak,square]{natbib}‎‎
+‎\else‎
+‎\RequirePackage{cite}‎
+‎\fi‎
+
+
+‎\if@ABtab‎
+‎%\usepackage{tabvar} %error tabvar package with cases package‎
+‎\RequirePackage{longtable}‎
+‎\RequirePackage{array}‎
+‎\RequirePackage{multirow}‎
+‎\else\relax\fi‎
+
+‎\if@ABfig‎
+‎\RequirePackage[usenames,dvipsnames]{pstricks}‎
+‎\RequirePackage{epsfig}‎
+‎\RequirePackage{pst-grad} % For gradients‎
+‎\RequirePackage{pst-plot} % For axes‎
+‎\RequirePackage{tikz}‎
+‎\usetikzlibrary{shapes‎, ‎arrows‎, ‎bending‎, ‎arrows.meta}‎
+‎%\RequirePackage{tkz-graph}‎
+‎%\RequirePackage{tkz-berge}‎
+‎\else\relax\fi‎
+
+‎\if@ABprog‎
+‎\RequirePackage{listings}‎
+‎\lstset{% general command to set parameter(s)‎ 
+‎basicstyle=\small‎, % ‎print whole listing small‎
+‎keywordstyle=\color{blue}\bfseries‎,
+% ‎underlined bold black keywords‎
+‎identifierstyle=‎, % ‎nothing happens‎
+‎stringstyle=\ttfamily\color{red}‎,
+‎commentstyle=\color{green}‎, % ‎white comments‎
+‎stringstyle=\ttfamily\color{red}‎, % ‎typewriter type for strings‎
+‎showstringspaces=false} % no special string spaces‎
+‎%\setlatintextfont[Scale=0.1]{Century}‎
+‎%\baselineskip =‎ .‎9cm‎
+‎\else\relax\fi‎
+‎
+\RequirePackage{pdfpages}‎
+‎
+
+‎\ifABalg‎
+‎\RequirePackage{algorithm}‎
+‎\RequirePackage{algorithmic}‎
+
+\renewcommand{\listalgorithmname}{فهرست الگوریتم‌ها}
+
+‎%\usepackage[ruled,vlined]{algorithm2e}‎
+‎%\renewcommand{\algorithmcfname}{الگوریتم}‎
+
+‎\else\relax\fi‎
+
+
+
+‎%\usepackage{bidiftnxtra}‎
+
+‎\RequirePackage[Kashida‎,   ‎extrafootnotefeatures‎, ‎\ifABindex quickindex-variant1\else  \fi]{xepersian}%KashidaXBFix=on‎,
+‎\settextfont{Yas}%Persian Modern‎
+‎%\DeclareMathSizes{12}{22.5}{20}{20}‎
+
+
+‎\setlatintextfont{Times New Roman}‎
+‎\ExplSyntaxOn‎
+‎\cs_set_eq:NN‎
+‎\etex_iffontchar:D‎
+‎\tex_iffontchar:D‎
+‎\cs_undefine:N \c_one‎
+‎\int_const:Nn \c_one { 1‎ } 
+‎\ExplSyntaxOff‎  
+‎\setmathdigitfont{Yas}‎
+‎%\setmathsfdigitfont{Yas}‎
+‎%\setmathttdigitfont{Yas}‎
+‎\defpersianfont\nastaliq[Scale=2]{IranNastaliq}‎
+‎\defpersianfont\sols[Scale=1.5]{XB Sols}‎
+‎\defpersianfont\chapternumber[Scale=3]{XB Niloofar}‎
+‎\defpersianfont\titr[Scale=1]{XB Zar}‎
+
+‎\twocolumnfootnotes‎ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%, ‎breqn‎
+% بسته ‎breqn‎ با بسته ‎xy‎ مشکل داره باید بسته ‎pb-diagram‎ رو چک کنم.
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+
+
+‎\renewcommand\proofname{\textbf{برهان}}‎
+
+% دستوری برای تغییر نام کلمه ‎«کتاب‌نامه»‎ به ‎«مراجع»‎
+‎\renewcommand{\bibname}{مراجع}‎
+\renewcommand{\listfigurename}{فهرست شکل‌ها}
+\renewcommand{\listtablename}{فهرست جدول‌ها}
+
+
+
+
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+‎\theoremstyle{plain}‎
+‎\newtheorem{theorem}{قضیه}[section]‎
+‎\newtheorem{lemma}[theorem]{لم}‎
+‎\newtheorem{proposition}[theorem]{گزاره}‎
+‎\newtheorem{corollary}[theorem]{نتیجه}‎
+
+
+‎\theoremstyle{definition}‎
+‎\newtheorem{definition}[theorem]{تعریف}‎
+‎\newtheorem{example}[theorem]{مثال}‎
+‎\newtheorem{problem}[theorem]{مساله}‎
+‎\newtheorem{condition}[theorem]{شرط}‎
+
+
+‎\theoremstyle{remark}‎
+‎\newtheorem{remark}[theorem]{ملاحظه}‎
+‎\newtheorem{treaty}[theorem]{قرارداد}‎
+‎\newtheorem{rema}[theorem]{تبصره}‎
+‎\newtheorem{notice}[theorem]{توجه}‎
+‎\newtheorem{hint}[theorem]{تذکر}‎
+‎\newtheorem{point}[theorem]{نکته}‎
+‎\newtheorem{rem}[theorem]{یادآوری}‎
+‎\newtheorem{hads}[theorem]{حدس}‎
+‎\newtheorem{notation}[theorem]{نمادگذاری}‎
+
+
+
+‎\newtheorem{x}[theorem]{}‎
+‎\newtheorem*{solution}{\normalfont\textbf{حل}}‎
+‎%\newenvironment{solution}{{\bf \noindent \\‎ حل. } ‎\rm‎ }{}
+% محیط‌های آزاد با و بدون شماره
+
+‎\newcommand{\nameB}{}‎
+‎\newtheorem*{envB}{\nameB}‎
+‎\newenvironment{fenv}[1][پیش‌فرض]‎
+‎{\renewcommand{\nameB}{#1}\begin{envB}}{\end{envB}}‎
+
+‎\newcommand{\nameA}{}‎
+‎\newtheorem{envA}{\nameA}‎
+‎\newenvironment{fcenv}[1][پیش‌فرض]‎
+‎{\renewcommand{\nameA}{#1}\begin{envA}}{\end{envA}}‎
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف دستورات جدید برای خلاصه نویسی و راحتی کا در هنگام تایپ فرمول‌های ریاضی
+‎\newcommand{\op}[1]{\mathop{#1}\limits}‎
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن سربرگ صفحات
+‎%\csname@twosidetrue\endcsname‎
+‎\pagestyle{fancy}‎ 
+‎\fancyhf{}‎ 
+‎\fancyhead[OL‎, ‎ER]{\thepage}‎
+‎\fancyhead[OR]{\small\leftmark}‎
+‎\fancyhead[EL]{\small\rightmark}‎
+‎\renewcommand{\chaptermark}[1]{\markboth{#1}{}}‎
+‎\renewcommand{\sectionmark}[1]{\markright{#1}}‎
+
+
+% برای رفع اخطار سرصفحه ‎fancyhdr‎
+‎\addtolength{\headheight}{2.5pt}‎
+
+‎%\markboth{\thechapter.\ #1}{}}‎
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن صفحات اول فصل‌ها
+‎%\makeatletter‎
+‎\newcommand\mycustomraggedright{%‎
+ ‎\if@RTL\raggedleft%‎
+ ‎\else\raggedright%‎
+ ‎\fi}‎
+‎\def\@part[#1]#2{%‎
+‎\ifnum \c@secnumdepth >-2\relax‎
+‎\refstepcounter{part}%‎
+‎\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%‎
+‎\else‎
+‎\addcontentsline{toc}{part}{#1}%‎
+‎\fi‎
+‎\markboth{}{}%‎
+‎{\centering‎
+‎\interlinepenalty \@M‎
+‎\ifnum \c@secnumdepth >-2\relax‎
+ ‎\huge\bfseries \partname\nobreakspace\thepart‎
+‎\par‎
+‎\vskip 40\p@‎
+‎\fi‎
+‎\Huge\bfseries #2\par}%‎
+‎\@endpart}‎
+‎\def\@makechapterhead#1{%‎
+‎\vspace*{80\p@}%‎
+‎{\parindent \z@ \mycustomraggedright %\@mycustomfont‎
+‎\ifnum \c@secnumdepth >\m@ne‎
+‎\if@mainmatter‎
+% این دو جفت محیط ‎center‎ باعث وسط چین شدن عنوان فصل می‌شوند.
+‎%\begin{center}‎
+‎\huge\bfseries\@chapapp\space {\chapternumber\thechapter}‎
+‎%\end{center}‎
+‎\par\nobreak‎
+‎\vskip 20\p@‎
+‎\fi‎
+‎\fi‎
+‎\interlinepenalty\@M‎ 
+‎%\begin{center}‎
+‎\Huge \bfseries #1\par\nobreak‎
+‎%\end{center}‎
+‎\vskip 50\p@‎
+}}
+‎%\makeatother‎
+% دستوراتی برای تنظیم شماره لاتین برای پانوشت‌ها
+‎%\makeatletter‎
+‎\def\@makeLTRfnmark{\hbox{\@textsuperscript{\latinfont\@thefnmark}}}‎
+‎\renewcommand\@makefntext[1]{%‎
+    ‎\parindent 1em%‎
+    ‎\noindent‎
+    ‎\hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}‎
+‎%\makeatother‎
+% دستوری برای تنظیم فرمول‌ها در حالت نمایشی
+‎\everymath\expandafter{\the\everymath \displaystyle}‎
+
+‎%\makeatletter‎
+‎%\ifABgls‎
+% دستوراتی برای تنظیم و تولید واژه‌نامه به صورت خودکار
+% ‎%style=listgroup,nonumberlist‎
+‎\newglossarystyle{mylistFa}{‎
+\glossarystyle{list}\addcontentsline{toc}{chapter}{واژه‌نامه فارسی به انگلیسی}
+‎\renewenvironment{theglossary}{}{}‎
+‎\renewcommand*{\glossaryheader}{}‎
+‎\renewcommand*{\glsgroupheading}[1]{\section*{\glsgetgrouptitle{##1}}}‎
+‎\renewcommand*{\glsgroupskip}{\vspace*{-1cm}}‎
+‎\renewcommand*{\glossaryentryfield}[5]     {\noindent\glstarget{##1}{##2}\dotfill \space ##3 \\}‎
+‎\renewcommand*{\glossarysubentryfield}[6]{\glossaryentryfield{##2}{##3}{##4}{##5}{##6}}‎
+}
+
+
+‎\newglossarystyle{mylistEn}{‎
+\glossarystyle{list}\addcontentsline{toc}{chapter}{واژه‌نامه انگلیسی به فارسی}
+‎\renewenvironment{theglossary}{}{}‎
+‎\renewcommand*{\glossaryheader}{}‎
+‎\renewcommand*{\glsgroupheading}[1]{\begin{LTR} \section*{\lr{\glsgetgrouptitle{##1}}} \end{LTR}}‎
+‎\renewcommand*{\glsgroupskip}{\vspace*{-1cm}}‎
+‎\renewcommand*{\glossaryentryfield}[5]     {\noindent\glstarget{##1}{##3}\dotfill \space ##2 \\}‎
+‎\renewcommand*{\glossarysubentryfield}[6]{\glossaryentryfield{##2}{##3}{##4}{##5}{##6}}‎
+}
+
+% تعریف دو نمونه واژه نامه
+\newglossary[glg]{english}{gls}{glo}{واژه‌نامه انگلیسی به فارسی}
+\newglossary[blg]{persian}{bls}{blo}{واژه‌نامه فارسی به انگلیسی}
+
+% توسط این دستور واژه مورد نظر در متن، هر دو واژه نامه و پاورقی می آید.
+‎\newcommand{\inpdic}[2]{\index{#1}‎
+‎	\newglossaryentry{fa-#1}{type=persian,name={#1}‎, ‎sort={#1},description={\lr{#2}}}\gls{fa-#1}\LTRfootnote{#2}‎
+‎	\newglossaryentry{en-#1}{type=english,name={\lr{#2}}‎, ‎sort={#2},description={#1}}\glsuseri{en-#1}‎
+‎\!\!\!\!}‎
+
+% توسط این دستور واژه مورد نظر در متن، هر دو واژه نامه  می آید.
+‎\newcommand{\indic}[2]{\index{#1}‎
+‎	\newglossaryentry{fa-#1}{type=persian,name={#1}‎, ‎sort={#1},description={\lr{#2}}}\gls{fa-#1}‎
+‎	\newglossaryentry{en-#1}{type=english,name={\lr{#2}}‎, ‎sort={#2},description={#1}}\glsuseri{en-#1}‎
+‎\!\!\!\!}‎
+
+% توسط این دستور واژه مورد نظر فقط در هر دو واژه نامه  می آید.
+‎\newcommand{\ingls}[2]{\index{#1}‎
+‎	\newglossaryentry{fa-#1}{type=persian,name={#1}‎, ‎sort={#1},description={\lr{#2}}}\glsuseri{fa-#1}‎
+‎	\newglossaryentry{en-#1}{type=english,name={\lr{#2}}‎, ‎sort={#2},description={#1}}\glsuseri{en-#1}‎
+‎\!\!\!\!}‎
+
+‎\makeglossaries‎
+‎\glsdisablehyper‎
+‎%\else‎
+‎%\relax‎
+‎%\fi‎
+‎%\makeatother‎
+
+% دستوراتی برای دست‌کاری تعریف ‎bordermatrix‎
+‎%\makeatletter‎
+‎\newif\if@borderstar‎
+‎\def\bordermatrix{\@ifnextchar*{%‎
+‎\@borderstartrue\@bordermatrix@i}{\@borderstarfalse\@bordermatrix@i*}%‎
+}
+‎\def\@bordermatrix@i*{\@ifnextchar[{\@bordermatrix@ii}{\@bordermatrix@ii[()]}}‎
+‎\def\@bordermatrix@ii[#1]#2{%‎
+‎\begingroup‎
+‎\m@th\@tempdima8.75\p@\setbox\z@\vbox{%‎
+‎\def\cr{\crcr\noalign{\kern 2\p@\global\let\cr\endline‎ }}%
+‎\ialign {$##$\hfil\kern 2\p@\kern\@tempdima & \thinspace‎ %
+‎\hfil $##$\hfil && \quad\hfil $##$\hfil\crcr\omit\strut‎ %
+‎\hfil\crcr\noalign{\kern‎ -‎\baselineskip}#2\crcr\omit‎ %
+‎\strut\cr}}%‎
+‎\setbox\tw@\vbox{\unvcopy\z@\global\setbox\@ne\lastbox}%‎
+‎\setbox\tw@\hbox{\unhbox\@ne\unskip\global\setbox\@ne\lastbox}%‎
+‎\setbox\tw@\hbox{%‎
+‎$\kern\wd\@ne\kern‎ -‎\@tempdima\left\@firstoftwo#1%‎
+‎\if@borderstar\kern2pt\else\kern‎ -‎\wd\@ne\fi%‎
+‎\global\setbox\@ne\vbox{\box\@ne\if@borderstar\else\kern 2\p@\fi}%‎
+‎\vcenter{\if@borderstar\else\kern‎ -‎\ht\@ne\fi%‎
+‎\unvbox\z@\kern-\if@borderstar2\fi\baselineskip}%‎
+‎\if@borderstar\kern-2\@tempdima\kern2\p@\else\,\fi\right\@secondoftwo#1 $%‎
+‎}\null \;\vbox{\kern\ht\@ne\box\tw@}%‎
+‎\endgroup‎
+}
+
+
+
+
+
+
+‎\if@ABfinal‎
+‎\def\certificate#1#2{\relax}‎
+‎\def\printcomment{\relax}‎
+‎\else‎
+‎\def\certificate#1#2{\newpage \fbox{\colorbox{yellow}{\small\begin{minipage}[c]{.98\textwidth}‎
+‎\textbf{#1}‎. ‎{#2}\par\end{minipage}}}\addtocounter{page}{-1}\newpage}‎
+‎\def\printcomment{\thispagestyle{empty}‎
+پیشنهادات و انتقادات خود در مورد این راهنمای کوتاه را می‌توانید به رایانامه ‎\lr{texfum@gmail.com}‎ ارسال کنید.
+‎\\‎‮
+با توجه به این‌که آماده‌سازی این مجموعه زمان زیادی برده و حاصل چند سال تجربه دوستان شماست، با در نظر گرفتن اهداف کسانی که در آماده‌سازی آن به هر نحو تلاش داشته‌اند. انتظار می‌رود که شما دوست عزیز فقط در جهت انجام رساله‌های شخصی خویش از آن استفاده نمایید‎.}‎
+‎\fi‎
+
+
+
+
+
+
+
+
+
+
+
+
+%                                   ‎Definition's & Environment's‎
+‎\newtoks\TSupervisor‎
+‎\newtoks\TOArbiter‎
+‎\newtoks\TTArbiter‎
+‎\newtoks\TAdvisor‎
+‎\newtoks\department‎
+‎\newtoks\thesisdate‎
+‎\newtoks\okdate‎
+‎\newtoks\defencedate‎
+‎\newtoks\name‎
+‎\newtoks\title‎
+‎\newtoks\surname‎
+‎\newtoks\keywords‎
+‎\newtoks\abstract‎
+‎\newtoks\faculty‎
+‎\newtoks\subject‎
+‎\newtoks\field‎
+‎\newtoks\department‎
+‎\newtoks\latintitle‎
+‎\newtoks\latinauthor‎
+‎\newtoks\latinfaculty‎
+‎\newtoks\latinthesisdate‎
+‎\newtoks\latinsubject‎
+‎\newtoks\latinfield‎
+‎\newtoks\firstlatinsupervisor‎
+‎\newtoks\secondlatinsupervisor‎
+‎\newtoks\firstlatinadvisor‎
+‎\newtoks\secondlatinadvisor‎
+‎\newtoks\latinname‎
+‎\newtoks\latinsurname‎
+‎\newtoks\latinabstract‎
+‎\newtoks\latinkeywords‎
+‎\newtoks\latinuniversity‎
+‎\newtoks\latinokdate‎
+‎\newtoks\latindefencedate‎
+‎\newtoks\university‎
+‎\newtoks\firstsupervisor‎
+‎\newtoks\secondsupervisor‎
+‎\newtoks\firstadvisor‎
+‎\newtoks\secondadvisor‎
+
+
+
+
+
+
+
+‎\def\frame{\begin{framed}}‎ 
+‎\def\endframe{\end{framed}}‎
+
+
+
+
+‎%\def\frame{\newpage \thispagestyle{empty} \begin{framed}\thispagestyle{empty}}‎ 
+‎%\def\endframe{\thispagestyle{empty} \end{framed}\thispagestyle{empty}\KashidaOn}‎
+
+
+‎\def\signature{\vspace{1cm}\begin{flushleft}{\nastaliq\scriptsize \the\name\ \the\surname \\ \the\thesisdate} \end{flushleft}}‎
+
+‎\long\def\tos#1#2#3{\ifnum#3=2\let\srow\bsrow\begin{table}[!h]\centering{\large #1}\\\begin{tabular}{p{7cm}l}‎ نام ‎&‎ نماد‎\\[.2cm] \hline & \\#2\end{tabular}\end{table}\else\ifnum#3=3\let\srow\csrow\begin{table}[!h]\centering{\large #1}\\\begin{tabular}{p{4cm}p{7cm}l}‎صفحه  ‎&‎ نام ‎&‎ نماد‎\\[.2cm] \hline & & \\#2\end{tabular}\end{table}\fi\fi}‎
+‎\def\bsrow#1#2{#1 & #2\\[2mm]}‎
+‎\def\csrow#1#2#3{\pageref{#3} & #2 & #1\\[2mm]}‎
+
+
+
+‎\def\code#1#2{‎
+‎\begin{latin}‎
+‎\lstinputlisting[lineskip=0.001cm,breaklines=true,numbers=left,language=#1‎, ‎basicstyle=\ttfamily\small‎, ‎numberstyle=\footnotesize‎ , ‎numbersep=10pt‎, ‎captionpos=b‎, ‎frame=single‎, ‎breakatwhitespace=false]{#2}‎
+‎\end{latin}‎
+}
+
+
+
+
+
+‎\def\iq{\item[\textcolor{red}{سوال}]}‎
+‎\def\ia{\item[\textcolor{green}{جواب}]}‎
+
+
+
+
+‎\if@ABfinal‎
+‎\def\error{\relax}‎
+‎\else‎
+‎\def\error{\ifmmode%‎
+‎\colorbox{red}{error}%‎
+‎\else%‎
+‎\colorbox{green}{اشکال}%‎
+‎\fi}‎
+‎\fi‎
+
+
+‎\newenvironment{preface}[1][پیش‌گفتار]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}\pagestyle{fancy}‎ 
+‎\fancyhf{}‎ 
+‎\fancyhead[OL‎, ‎ER]{\thepage}‎
+‎\fancyhead[OR]{\small#1}‎
+‎\fancyhead[EL]{\small#1}‎
+‎%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}‎
+‎%\renewcommand{\sectionmark}[1]{\markright{#1}}‎ 
+‎\KashidaOff}{\newpage‎
+‎\pagestyle{fancy}‎ 
+‎\fancyhf{}‎ 
+‎\fancyhead[OL‎, ‎ER]{\thepage}‎
+‎\fancyhead[OR]{\small\leftmark}‎
+‎\fancyhead[EL]{\small\rightmark}‎
+‎%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}‎
+‎%\renewcommand{\sectionmark}[1]{\markright{#1}}‎
+‎\KashidaOn}‎
+
+
+
+
+‎\floatstyle{plain}% for float package‎
+‎\newfloat{diagram}{tbp}{lloc}[chapter]‎
+‎\floatname{diagram}{نمودار}‎
+\def\listofdiagrams{\listof{diagram}{فهرست نمودارها}}
+
+
+
+% دستوراتی برای تنظیم شمارنده‌ها‮
+‎\numberwithin{equation}{chapter}‎
+‎\numberwithin{table}{chapter}‎
+‎\numberwithin{figure}{chapter}‎
+‎%\renewcommand\theequation{\arabic{equation}}‎
+‎%\renewcommand\thefigure{\arabic{figure}}‎
+‎%\renewcommand\thetable{\arabic{table}}‎
+
+
+
+
+
+
+
+
+‎%										besm‎
+
+
+
+
+
+
+
+
+‎\def\besm#1{‎
+‎%\pagestyle{empty}‎
+‎\begin{center}‎
+‎\includegraphics[scale=.25]{#1}‎
+‎\end{center}‎
+}
+
+%
+
+
+
+
+
+
+
+
+
+
+
+
+‎%										persian title‎
+
+
+
+
+
+
+
+
+
+‎\newcommand{\ftitle}{‎
+‎\newpage‎
+‎\KashidaOff‎
+‎\begin{center}‎
+‎%\thispagestyle{empty}‎
+‎\vspace*{-2cm}‎
+‎\includegraphics[width=2.5cm]{logo}\par‎
+‎\ifABproject‎
+‎\relax‎
+‎\else‎
+‎\par‎
+‎{\tiny\nastaliq‎
+دانشکده
+‎\the\faculty\par‎
+گروه
+‎\the\department}\vfill‎
+ ‎\if@MScthesis‎
+‎{\large\bfseries‎‎ پایان‌نامه}
+‎\else‎
+‎{\large\bfseries‎‎ رساله}
+‎\fi‎
+‎\vskip‎ .‎1cm‎
+‎{\large\bfseries‎ برای دریافت درجه
+ ‎\if@MScthesis‎
+کارشناسی ارشد
+‎\else‎
+دکتری
+‎\fi‎
+}
+{\large\bfseries{در رشته}}
+‎\vskip‎ .‎2cm‎
+‎\if@MScthesis‎
+‎{\large \bfseries\the\subject}‎
+‎\else‎
+‎{\large \bfseries\the\subject‎
+، گرایش
+‎\the\field}‎
+‎\fi‎
+‎\fi\par‎
+‎\vspace*{\fill}‎
+‎{\Large \bfseries‎‎ عنوان}
+‎\vskip‎ .‎2cm‎
+ ‎{\Huge\bfseries {\titr\baselineskip=1cm \the\title}}\baselineskip=1.5cm‎ \par
+ ‎{\large
+  نگارنده}
+\par
+{{\large\bfseries   \the\name\ \ \the\surname}}\vfill
+
+‎\vskip‎ .‎8cm‎
+ ‎\baselineskip=.5cm‎
+‎\large‎
+‎\if!\the\secondsupervisor!‎
+استاد راهنما
+‎{\Large\bfseries‎
+‎\par‎
+‎\the\firstsupervisor}\\[.5cm]‎
+‎\else‎
+استاد راهنمای اول
+‎\par‎
+‎{\large\bfseries \the\firstsupervisor{}}\\[.3cm]‎
+استاد راهنمای دوم
+‎\par‎
+‎{\large\bfseries \the\secondsupervisor}\\[.3cm]‎
+‎\fi‎
+‎\large‎
+‎\if!\the\secondadvisor!‎
+‎\if!\the\firstadvisor!‎
+‎\relax‎
+‎\else‎
+استاد مشاور
+‎\par{\Large\bfseries‎
+‎\the\firstadvisor}\\[.5cm]‎
+‎\fi‎
+‎\else‎
+استاد مشاور اول
+‎\par‎
+‎{\large\bfseries\the\firstadvisor}\\[.3cm]‎
+استاد مشاور دوم
+‎\\[.3cm]‎
+‎{\large\bfseries\the\secondadvisor}‎
+‎\fi\par‎‎
+‎{\the\thesisdate}‎
+‎\vfill‎
+‎\end{center}\KashidaOn‎
+}
+
+
+
+
+
+
+
+
+%                                                    ‎specifications‎
+
+
+
+
+
+
+‎\newcommand{\specifications}{‎
+‎\KashidaOff\pagebreak‎
+‎\baselineskip=.7cm‎
+‎\begin{frame}‎
+‎{\hspace*{\fill}\includegraphics[height=2.5cm]{logo}}‎
+‎\vspace*{-3.5cm}‎
+‎\noindent{\centerline{}}‎
+\noindent{\centerline{بسمه تعالی}}
+\noindent{\centerline{مشخصات ‎\if@MScthesis‎ پایان‌نامه ‎\else‎ رساله ‎\fi‎ تحصیلی دانشجویان}
+\noindent{\centerline{دانشگاه ‎\the\university}\hspace*{\fill}}}‎
+‎\hrule‎
+‎\vspace{3mm}‎
+‎\noindent‎
+ عنوان:
+‎\the\title\par‎
+‎\hrule‎
+‎\vspace{3mm}‎
+‎\noindent‎
+نام نویسنده: 
+‎\the\name~\the\surname‎
+‎\hspace*{\fill}‎
+‎\if!\the\secondsupervisor!‎
+‎\par\noindent%‎
+استاد راهنما:
+‎\the\firstsupervisor‎
+‎\else‎
+‎\par\noindent‎
+استاد راهنمای اول:
+‎{\the\firstsupervisor}\hspace{\fill}‎
+استاد راهنمای دوم:
+‎{\the\secondsupervisor}\hspace{\fill}‎
+‎\fi‎
+‎\noindent‎
+‎\if!\the\secondadvisor!‎
+‎\if!\the\firstadvisor!‎
+‎\relax‎
+‎\else‎
+‎\par\noindent‎
+استاد مشاور:
+{
+‎\the\firstadvisor}‎
+‎\fi‎
+‎\else‎
+‎\par\noindent‎
+استاد مشاور اول:
+‎{\the\firstadvisor{}}\hspace{\fill}‎
+استاد مشاور دوم:
+‎{\the\secondadvisor}\hspace{\fill}‎
+‎\fi‎
+‎\par \hrule‎
+‎\vspace{1mm}‎
+‎\noindent‎ 
+دانشکده:
+‎\the\faculty\hspace{.5cm}‎
+گروه:
+‎\the\department\par\noindent‎
+رشته تحصیلی:
+‎\the\subject\hspace*{\fill}‎
+‎\vspace{1mm}‎
+‎\hrule‎
+‎\vspace{1mm}‎
+‎\noindent‎
+تاریخ تصویب:
+‎\the\okdate\hspace*{\fill}‎
+تاریخ دفاع:
+‎\the\defencedate\hspace*{\fill}‎
+‎\vspace*{1mm}‎
+‎\hrule‎
+‎\vspace*{1mm}\noindent‎
+مقطع تحصیلی:
+ ‎\if@MScthesis‎
+کارشناسی ارشد
+‎\else‎
+دکتری
+‎\fi‎
+ ‎\hspace*{\fill}‎
+ تعداد صفحات: 
+‎\pageref{lastpage} \hspace*{\fill}\vspace*{1mm}‎
+‎\hrule‎
+ ‎\vspace{1mm}‎
+ ‎\noindent‎
+{
+‎\parbox[t][8cm][t]{14.5cm}{‎
+چکیده:
+‎{\small\the\abstract}}‎
+}
+‎\hrule‎
+‎\par‎
+‎\vspace*{1mm}‎
+‎\noindent‎
+واژگان کلیدی:
+‎\the\keywords‎
+‎\vspace*{3mm} \hrule‎
+‎\vspace*{3mm}\noindent‎
+امضای استاد راهنما:
+‎\hspace*{\fill}‎
+تاریخ:
+‎\hspace*{\fill}‎
+‎\end{frame}‎
+‎\pagebreak‎
+‎%\thispagestyle{empty}‎
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%                                             ‎presentation‎
+
+
+
+
+
+
+
+
+
+‎\def\presentation#1#2#3#4{‎
+‎\ifnum#1=1‎
+‎\KashidaOff‎
+‎%\begin{acknowledgementpage}‎
+‎%\thispagestyle{empty}‎
+‎\vspace{4cm}‎
+
+‎{\nastaliq‎
+‎{\small‎
+‎\noindent‎ به پاس تعبیر عظیم و انسانی‌شان از کلمه ایثار و از خودگذشتگی‌شان‎،\\‎
+‎\hspace*{.5cm}‎ به پاس عاطفه سرشار و گرمای امیدبخش وجودشان 
+
+‎\hspace*{1cm}‎ که در این سردترین روزگاران بهترین پشتیبان است‎،\\‎ 
+به پاس قلب‌های بزرگ‌شان 
+
+‎\hspace*{.5cm}‎ که فریادرس است و سرگردانی و ترس در پناهشان به شجاعت می‌گراید ‎\\‎
+و به پاس محبت‌های بی‌دریغ‌شان 
+
+‎\hspace*{.5cm}‎ که هرگز فروکش نمی‌کند،
+
+‎\vspace{1cm}‎
+‎\Large‎
+تقدیم به
+
+‎\vspace{1.5cm}‎
+‎\LARGE‎
+\centerline{پدر و مادر عزیزم}
+}}
+‎%\end{acknowledgementpage}‎
+‎\newpage‎
+‎\else‎
+‎\KashidaOff‎
+‎%\begin{acknowledgementpage}‎
+‎%\thispagestyle{empty}‎
+‎\vspace{4cm}‎
+
+‎{\nastaliq‎
+‎{\LARGE‎
+‎#2‎
+
+‎\vspace{1.5cm}‎
+‎#3‎
+
+‎\vspace{1.5cm}‎
+‎#4‎
+}}
+‎%\end{acknowledgementpage}‎
+‎\newpage‎
+‎\fi‎
+‎\KashidaOn‎
+}
+
+
+
+
+
+
+%	                                                   ‎praise‎
+
+
+
+
+
+
+
+
+
+‎\def\praise#1#2#3#4{‎
+‎\ifnum#1=1‎
+‎%\thispagestyle{empty}‎
+‎\baselineskip=.750cm\KashidaOff‎
+‎\par\‎ 
+‎{\nastaliq‎
+ هو العلیم‎،}‎
+‎\vspace*{1cm}‎
+
+‎\noindent{\normalsize‎
+ زیباترین نام را بر زبان جاری می کنم ... که هر کس زبان به حمد تو گشود بی‌تردید نگاه تو بر او افتاده. پس بر قلبم آن جاری کن که خود می‌پسندی در ثنایت لب گشایم‎.\par‎
+‎\noindent‎  در وادی معرفت نگنجد، سرچشمه هدایت نجوشد، سر بر قامت بندگی فرو نیافتد ...، گر گنجینه‌ای را که مقدسش خواندی و به آن قسم یاد کردی‎\RTLfootnote{‎ن و القلمِ و ما یَسطُرونَ}، کوچک شمرده شود و تنها خاطره جوهر خشک شده‌ای از آن بر برگ برگِ صفحات زندگی باقی ماند‎.\\‎
+  تو علم را روشنی قرار دادی و فانوسی در بیغوله راه که مسیر را، راه نماید و تزکیه را مقدم بر آن دانستی تا نگاهبانش باشد که تزکیه و تعلیم در معیت هم گوهر وجودی انسان را به نور تو منور کند، پرده از واقعیات کنار زند. آن جاست که حقیقت رخ نمایاند، نظر فراتر افتد، خوان گنجینه‌های دانش رنگین شود و ... آری آنجاست که آدمی معنا یابد‎.\\‎
+  من اگر وعده‌هایم با تو زیر خروار‌ها  تل فراموشی و غفلت مدفون گردیده، اگر زشتی طغیان در نظرم زیبا جلوه‌گری می‌کند و چشمانم خشک‌تر از آن است که در مقام توبه اشکی بر آن جاری شود، بدان از سر جهل است و نسیان...اما بار الها چشمِ طمع بر رحمتت دوخته‌ام و در تمنای رهایی از ظلمت ضلالت، ترنم باران معرفتت را می‌طلبم، امید آنکه جوانه‌های حقیقت را در وجودم برویاند و انعکاس آن چشمانم را روشن کند‎.\\‎
+  اکنون چهره بر چهره خاک می‌سایم و تو را به حبیبت قسم می‌دهم که..." هر آن خصلت ناپسند که در من می‌بینی به  لطف واسع خویش اصلاحش فرمای تا پسندیده شود و هر آن عیب که نفسم را به فساد بیالاید از من بازگیر  و هر آن نقص که جانم را از کمال باز دارد برطرفش فرمای‎!"\\‎
+  و در آن روز که نوبت زندگانی به سر رسد و پیک مرگ حلقه بر در خانه تن بکوبد و دعوت واجب الاجابه تو از آسمان‌ها به گوش آید...پروردگارا‎!‎ بر محمد ‎(ص)‎ و آل پاکش درود فرست و به حق ایشان عمر ما را با رستگاری به پایان آور و عاقبتمان را ختم به خیر فرمای‎...!\par}‎
+‎{\nastaliq‎
+ ‎{\small‎
+  زبان قاصر است ‎\‎, و ‎\‎, مجال کوتاه...
+‎\par‎
+‎\ \hspace{2cm}‎
+  تو خود  قصیده‌ی مهر را از لوح نانوشته‌ی قلبم بخوان‎...!‎
+}}
+‎\else‎
+‎\baselineskip=.750cm‎
+‎%\thispagestyle{empty}‎
+‎\KashidaOff‎
+‎{\nastaliq‎
+‎#2‎
+‎}\par‎
+‎#3‎
+‎{\nastaliq‎
+ ‎{\small‎
+‎#4‎
+}}
+‎\fi‎
+‎\KashidaOn‎
+}
+
+
+
+
+
+
+
+
+
+
+%                                                     ‎thanks‎
+
+
+
+
+
+
+
+
+
+‎\def\thanks#1#2#3#4{‎
+‎\ifnum#1=1‎
+‎\KashidaOff‎
+‎\newpage‎
+‎%\thispagestyle{empty}‎
+% سپاس‌گزاری
+‎{\nastaliq‎
+سپاس‌گزاری...
+}
+‎\\[2cm]‎
+سپاس خداوندگار حکیم را که با لطف بی‌کران خود، آدمی را زیور عقل آراست.
+
+در آغاز وظیفه‌‌ی  خود  می‌دانم از زحمات بی‌دریغ استاد راهنمای خود، ‎\the\TSupervisor\‎   صمیمانه تشکر
+و  قدردانی کنم  که از 
+راهنمایی‌های ارزنده‌  ایشان در راستای پیشبرد پژوهش حاصل فراوان بردم و همواره شاگرد مکتب علم و انسانیت و منش والای ایشان هستم.
+
+‎\if!\the\firstadvisor!‎
+‎\relax‎
+‎\else‎
+از ‎{\the\TAdvisor}‎ که زحمت  مطالعه و مشاوره‌  این پایان‌نامه
+را تقبل  فرمودند و
+در آماده سازی  این پایان‌نامه به نحو احسن اینجانب را مورد راهنمایی قرار دادند، کمال امتنان را دارم.
+‎\fi‎
+همچنین لازم می‌دانم از اساتید فرهیخته ‎{\the\TOArbiter}‎ و ‎{\the\TTArbiter}‎ که داوری این پایان‌نامه را به عهده گرفتند با تمام وجود تشکر و قدردانی نمایم.
+
+در پایان، بوسه می‌زنم بر دستان خداوندگاران مهر و مهربانی، پدر و مادر عزیزم و بعد از خدا، ستایش می‌کنم وجود مقدس‌شان را و تشکر می‌کنم از برادر و خواهران عزیزم به پاس عاطفه سرشار و گرمای امیدبخش وجودشان، که در این سردترین روزگاران، بهترین پشتیبان من بودند.
+% با استفاده از دستور زیر، امضای شما، به طور خودکار، درج می‌شود
+‎\signature‎
+‎\else‎
+‎\KashidaOff‎
+‎\newpage‎
+‎%\thispagestyle{empty}‎
+% سپاس‌گزاری
+‎{\nastaliq‎
+‎#2‎
+}
+‎\\[2cm]‎
+ ‎#3‎
+
+% با استفاده از دستور زیر، امضای شما، به طور خودکار، درج می‌شود
+
+‎{\vspace{1cm}\begin{flushleft}{\nastaliq\scriptsize #4} \end{flushleft}}‎
+‎\fi‎
+‎\KashidaOn‎
+}
+
+
+
+
+
+
+
+
+
+
+
+%                                                 ‎declartion‎
+
+
+
+
+
+
+
+
+
+‎\def\declaration{\par\vspace{-2cm}‎
+‎\begin{frame}‎
+‎\parbox[t][14cm][t]{14cm}{‎
+‎\centerline{\textbf{اظهارنامه}}‎
+‎\hspace{-.7cm}‎ عنوان ‎\if@MScthesis‎
+پایان‌نامه
+‎\else‎
+رساله
+‎\fi‎
+: 
+‎\the\title‎
+
+‎\vspace*{.5cm}‎
+‎\hspace{-.6cm}‎اینجانب ‎\the\name \ \the\surname\‎ دانشجوی دوره  ‎\if@MScthesis‎
+کارشناسی ارشد
+‎\else‎
+دکتری
+‎\fi‎
+دانشکده‎\ \the\faculty\‎ دانشگاه ‎\the\university\‎ نویسنده ‎\if@MScthesis‎
+پایان‌نامه 
+‎\else‎
+رساله
+‎\fi‎
+تحت راهنمایی‎\ \the\firstsupervisor\‎  متعهد می‌شوم:
+‎\begin{enumerate}[a.]‎
+‎\item‎
+تحقیقات در این رساله توسط اینجانب انجام شده و از صحت و اصالت برخوردار است.
+‎\item‎
+در استفاده از نتایج پژوهش‌های محققان دیگر به مرجع مورد استفاده استناد شده است.
+‎\item‎
+مطالب مندرج در این ‎\if@MScthesis‎
+پایان‌نامه 
+‎\else‎
+رساله
+‎\fi‎
+تاکنون توسط خود یا فرد دیگری برای دریافت هیچ نوع مدرک یا امتیازی به جایی ارائه نشده است.
+‎\item‎
+کلیه حقوق این اثر متعلق به دانشگاه ‎\the\university\‎ است و مقالات مستخرج با نام ‎\rq\rq‎ دانشگاه ‎\the\university\lq\lq‎ و یا 
+‎\LRE{``\the\latinuniversity''}‎
+به چاپ خواهد رسید.
+‎\item‎
+حقوق معنوی تمام افرادی که در به دست آمدن نتایج اصلی رساله تاثیرگذار بوده‌اند در مقالات مستخرج از آن رعایت شده است.
+‎\item‎
+در کلیه مراحل انجام این رساله، در مواردی که از موجود زنده(یا بافت‌های آن‌ها) استفاده شده، ضوابط و اصول اخلاقی رعایت شده است.
+‎\item‎
+در کلیه مراحل انجام این رساله، در مواردی که به حوزه اطلاعات شخصی افراد دسترسی یافته یا استفاده شده، اصل رازداری، ضوابط و اصول اخلاقی انسانی رعایت شده است.
+‎\end{enumerate}‎
+}
+‎\vspace*{-2cm}\par\hfill\parbox[t][2cm][t]{3cm}{\begin{center}‎
+\textbf{تاریخ ‎\\‎امضای دانشجو}
+‎\end{center}}‎
+‎\begin{frame}‎
+\centerline{\textbf{مالکیت نتایج و حق نشر}}
+‎{\bf\footnotesize‎
+‎\begin{itemize}‎
+‎\item‎
+کلیه حقوق این اثر و محصولات آن(مقالات مستخرج، برنامه‌های رایانه‌ای، نرم‌افزارها و تجهیزات ساخته شده) متعلق به دانشگاه ‎\the\university\‎ است. این مطلب بایستی به نحو مقتضی در تولیدات علمی مربوطه ذکر شود.
+‎\item‎
+استفاده از اطلاعات و نتایج این رساله بدون ذکر مرجع مجاز نیست.
+‎\end{itemize}}‎
+‎\end{frame}‎
+‎\end{frame}‎
+}
+
+
+
+
+
+
+
+%  	‎										lSpecifications‎
+
+
+
+
+
+
+
+
+
+‎\newcommand{\lSpecifications}{\begin{latin}%‎
+‎\begin{frame}‎
+‎\clearpage\thispagestyle{empty}‎
+‎\includegraphics[height=2cm]{logo}\hspace*{\fill}\\‎
+‎\vspace*{-2.5cm}‎
+‎\noindent{\centerline{}}‎
+‎\noindent{\centerline{In the name of God}}‎
+‎\noindent{\centerline{Graduate Studies\ \if@MScthesis Thesis \else Dissertation \fi Information}‎
+‎\noindent{\centerline{\the\latinuniversity}\hspace*{\fill}}}‎
+‎\vspace*{8mm}‎
+‎\hrule‎
+‎\vspace{3mm}‎
+‎\noindent‎
+‎%Title of‎
+‎\the\latintitle\\‎ 
+‎\hrule‎
+‎\vspace{2mm}‎
+‎\noindent‎
+‎Author‎:
+‎\the\latinname \; \the\latinsurname‎
+‎\hspace*{\fill}‎
+‎\if!\the\secondlatinsupervisor!‎
+‎\par\noindent‎
+‎Supervisor‎:
+‎\the\firstlatinsupervisor‎
+‎\else‎
+‎\par\noindent‎
+‎First Supervisor‎:
+‎{\the\firstlatinsupervisor}\hspace*{\fill}‎
+‎Second Supervisor‎:
+‎{\the\secondlatinsupervisor}\hspace*{\fill}‎
+‎\fi‎
+‎\noindent‎
+‎\if!\the\secondlatinadvisor!‎
+‎\if!\the\firstlatinadvisor!‎
+‎\relax‎
+‎\else‎
+‎\par\noindent‎
+‎Advisor‎:
+‎\the\firstlatinadvisor‎
+‎\fi‎
+‎\else‎
+‎First Advisor‎:
+‎{\the\firstlatinadvisor}\hspace*{\fill}‎
+‎Second Advisor‎:
+‎{\the\secondlatinadvisor}\hspace*{\fill}‎
+‎\fi‎
+‎\vspace{2mm}\hrule‎
+‎\vspace{2mm}‎
+‎\noindent‎ 
+‎Faculty‎:
+‎\the\latinfaculty%\hspace{.5cm}‎
+‎\par\noindent‎
+‎Department‎:
+‎\the\latinsubject\hspace*{\fill}‎
+‎Specialization‎:
+‎\the\latinfield\hspace*{\fill}‎
+‎\vspace{1mm}‎
+‎\hrule‎
+‎\vspace{1mm}‎
+‎\noindent‎
+‎Approval Date‎:
+‎\the\latinokdate\hspace*{\fill}‎
+‎Defence Date‎:
+‎\the\latindefencedate\hspace*{\fill}‎
+‎\vspace*{1mm}‎
+‎\hrule‎
+‎\vspace*{2mm}\noindent‎
+ ‎\if@MScthesis‎
+‎M.Sc‎.
+‎\else‎
+‎Ph.D‎.
+‎\fi‎
+ ‎\hspace*{\fill}‎
+‎Number of Pages‎:
+‎\pageref{lastpage} \hspace*{\fill}\vspace*{1mm}‎
+‎\hrule‎
+ ‎\vspace{2mm}‎
+ ‎\noindent\parbox[t][8cm][t]{14.3cm}{‎
+% 
+‎{Abstract:}‎
+‎\the\latinabstract}‎
+‎\vspace*{3mm}‎
+‎\hrule‎
+‎\par‎
+‎\vspace*{2mm}‎
+‎\noindent‎
+‎Key Words‎:
+‎\the\latinkeywords‎
+‎\vspace*{1mm} \hrule‎
+‎\vspace*{3mm}\noindent‎
+‎Signature of Supervisor‎:
+‎\hspace*{\fill}‎
+‎Date‎:
+‎\hspace*{\fill}‎
+‎\end{frame}‎
+‎\end{latin}}‎
+
+
+
+
+
+
+
+
+
+
+
+
+
+%     	‎												lTitle‎
+
+
+
+
+
+
+
+
+
+‎\newcommand{\lTitle}{\begin{center}\newpage \begin{latin}\thispagestyle{empty}‎
+‎\vspace*{-2cm}‎
+‎\includegraphics[width=2.5cm]{logo}‎
+‎\centerline{\bf \the\latinuniversity}‎ 
+‎\large\bfseries‎
+‎\the\latinfaculty\space‎ 
+‎\\[.7cm]%vskip 5mm‎
+%{
+ ‎\if@MScthesis‎
+‎Dissertation Submitted in Partial‎ 
+‎\\[.2cm]‎
+ ‎Fulfillment of the Requirements for the‎
+‎\\[.2cm]‎
+‎Degree of Master of Science in\par‎
+‎\else‎
+‎Doctoral Thesis Submitted in Partial‎ 
+‎\\[.2cm]‎
+‎Fulfillment of the  Requirements for the‎
+‎\\[.2cm]‎
+‎Degree of Doctor of Science in \par‎
+‎\fi‎
+‎{\large\bfseries \the\latinsubject}‎
+‎\vfill‎
+‎{\large\bfseries Title}\\[.3cm]‎
+‎\baselineskip=.750cm‎
+‎{\Large\bfseries \the\latintitle}‎
+‎\baselineskip=.750cm \\[.3cm]‎
+\vfill
+{\bfseries by}\\[.3cm]
+{\large %\supervisorfont
+\rm\the\latinname \; \the\latinsurname}\par‎
+\vfill
+‎\large‎
+‎\if!\the\secondlatinsupervisor!‎
+‎Supervisor‎
+‎{\Large\bfseries\par‎
+‎\the\firstlatinsupervisor}‎
+‎\else‎
+‎\large‎
+‎First Supervisor‎‎
+‎\par‎
+‎{\Large\bfseries \the\firstlatinsupervisor‎ }
+‎\\[.3cm]‎
+‎\large‎
+‎Second Supervisor‎
+‎\par‎
+‎{\Large\bfseries \the\secondlatinsupervisor}‎
+‎\fi‎
+‎\\[.5cm]‎
+‎\large‎
+‎\if!\the\secondlatinadvisor!‎
+‎\if!\the\firstlatinadvisor!‎
+‎\relax‎
+‎\else‎
+‎Advisor‎
+‎{\Large\bfseries\par‎
+‎\the\firstlatinadvisor}‎
+‎\fi‎
+‎\else‎
+‎\large‎
+‎First Advisor‎
+‎\par‎
+‎{\Large\bfseries\the\firstlatinadvisor}\\[.3cm]‎
+‎Second Advisor‎
+‎\par‎
+‎{\Large\bfseries\the\secondlatinadvisor}‎
+‎\fi‎
+‎\vfill‎
+‎{\the\latinthesisdate}‎
+‎\par‎
+‎\vskip 1cm‎
+‎\par‎
+‎\vfill‎
+‎\end{latin}\end{center}%‎
+}
+
+\def\sampletext{نمونه متن و فرمول برای تعیین صفحات اندازه حروف ‎۱۱‎ پوینت، اندازه فونت ‎۱‎، فاصله قبل و بعد فرمول ‎۴‎ پوینت، فاصله‌ی بین خطوط ۱.۹،(البته برای حداکثر ‎۴‎ فرمول در صفحه، در مواردی که در غالب کار فرمول نمایشی موجود نباشد و به جای آن تعداد فرمول‌های درون متنی بیش از حد معمول باشد فاصله‌ی بین خطوط با توجه به همان کار تنظیم خواهد شد) است.
+}
+‎\def\samplemath{\[X=\{x_1,x_2,\cdots‎, ‎x_i,\cdots‎, ‎x_n\},\quad \int_1^\infty 2^x dx \]}‎
+‎\if@ABfinal‎
+‎\def\sample{\relax}‎
+‎\else‎
+‎\def\sample{\sampletext‎
+‎\samplemath‎
+‎\sampletext‎
+‎\samplemath‎
+‎\sampletext‎
+‎\samplemath‎
+‎\sampletext‎
+‎\samplemath‎
+‎\sampletext‎
+‎\footnote{پانوشت}}‎
+‎\fi‎
+‎%\def\algorithmicname{الگوریتم}‎
+‎%\def\ALG@name{الگوریتم}‎
+‎%\def\ALGS@name{الگوریتم‌ها}‎
+‎%\renewcommand{\thealgorithm}{الگوریتم}‎
+‎%\floatname{algorithm}{Procedure}‎
+
+
+
+
+‎\AtBeginDocument{‎
+‎\renewcommand{\baselinestretch}{1.9}\normalsize‎
+‎\abovedisplayshortskip=0pt‎
+‎\belowdisplayshortskip=0pt‎
+‎\abovedisplayskip=4pt‎
+‎\belowdisplayskip=4pt‎
+‎\sample‎
+‎\renewcommand{\baselinestretch}{1}\normalsize‎
+}
+
+‎\renewcommand{\arraystretch}{1}‎
+‎\endinput

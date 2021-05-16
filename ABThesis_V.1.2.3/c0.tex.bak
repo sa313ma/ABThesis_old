@@ -1,0 +1,376 @@
+\section{Introduction}
+\begin{lemma}\label{le1}
+Let $L$ be a Lie algebra such that $\Phi(L)=Z(L)=0$. Then 
+\[F(L)\leq LN.\]
+\end{lemma}
+\begin{proof}
+If $M$ is a minimal ideal of $L$, then either $[M,L]=0$ or $[M,L]=M$. But  $[M,L]=0$ implies $M\leq Z(L)=0$, and so $[M,L]=M$. It follows that $M$ is contained in every term of  lower central series
+of $L$, and hence $M\leq LN$. Since
+ $\Phi(L)=0$, $F$ is a product of minimal ideal of $L$ and hence it follows that $F\leq LN$. 
+\end{proof}
+\begin{lemma}\label{le2}
+Let $L$ be a Lie algebra such that $\Phi(L)=0$. Put $Z=Z(L)$. Then $Z(\dfrac{L}{Z})=0$ and $\Phi(\dfrac{L}{Z})=0$. 
+\end{lemma}
+\begin{proof}
+Let $\dfrac{W}{Z}=Z(\dfrac{L}{Z})$. Then $[L,W]\leq L^{2}\cap Z\leq \Phi(L)=0$, implying  $W=Z$ and $Z(\dfrac{L}{Z})=0$. Now, since $\Phi(L)=0$ then the abelian ideal $Z$ has a complement $H$ in $L$. Clearly  $H\unlhd L$, whence $\Phi(H)\leq \Phi(L)=0$. But $\dfrac{L}{Z}\simeq H$ and so, the proof is concluded. 
+\end{proof}
+\begin{lemma}\label{le3}
+Let $L\neq 0$ be a meta-nilpotent Lie algebra. Then 
+\begin{enumerate}
+\item[(i)] $K(\dfrac{L}{F(L)})<\dim \dfrac{F(L)}{\Phi(L)}$.
+\item[(ii)]
+$\dim F(L)>\dfrac{\frac{1}{2}\dim L+\frac{1}{2}\dim \Phi(L)}{\frac{1}{2}\dim {(\frac{L}{F(L)})}^{2}}$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Assume first that $\Phi(L)=0$. Then $F(L)$ is abelian. Moreover, $F(L)=\bigoplus_{i=1}^{m}M_{i}$, a direct product of  minimal ideal of $L$. We have $M_{i}\leq c_{L}(F(L))$. Since $L$ is meta-nilpotent we have $LN\leq F(L)$, and thus $M_{i}\leq c_{L}(LN)$. Hence $K(\dfrac{L}{c_{L}(M_{i})})<\dim M_{i}$ for each $i$. 
+\\
+\indent
+Denote $L_{1}=M_{1}, L_{2}=M_{1}+M_{2}, \ldots, L_{m}=M_{1}+M_{2}+\ldots+M_{m}=F(L)$. We prove by induction that $K(\frac{L}{c_{L}(L_{i})})<\dim L_{i}$ for all  $1\leq i\leq m$. This is already known for $i=1$. Suppose it is proved for $j$ and we now obtain it for  $j+1$. we have 
+\begin{equation}\label{eq1}
+K(\frac{L}{c_{L}(L_{j})})<\dim L_{j}.
+\end{equation} 
+Notice that $\frac{L}{c_{L}(L_{j+1})}=\dfrac{L}{c_{L}(L_{j}+M_{j+1})}=\dfrac{L}{c_{L}(L_{j})\cap c_{L}(M_{j+1})}$.\\
+\indent
+ Now, 
+ $\dfrac{c_{L}(L_{j})}{c_{L}(L_{j})\cap c_{L}(M_{j+1})}$ is an ideal of $\dfrac{L}{c_{L}(L_{j})\cap c_{L}(M_{j+1})}$ and the respective quotient isomorphic to  $\dfrac{L}{c_{L}(L_{j})}$. Thus, we have 
+ \begin{equation}\label{eq2}
+ K(\dfrac{L}{c_{L}(L_{j+1})})\leq K(\dfrac{L}{c_{L}(L_{j})})+K(\dfrac{c_{L}(L_{j})}{c_{L}(L_{j})\cap c_{L}(M_{j+1})}).
+ \end{equation}
+ Notice further that  $\dfrac{c_{L}(L_{j})}{c_{L}(L_{j})\cap c_{L}(M_{j+1})}$ is isomorphic  to $\dfrac{c_{L}(L_{j})+c_{L}(M_{j+1})}{c_{L}(M_{j+1})}$.  This last Lie algebra acts coprimely and faithfully on $M_{j+1}$, thus 
+ \[\dfrac{K(c_{L}(L_{j}))+c_{L}(M_{j+1})}{c_{L}(M_{j+1})}<\dim M_{j+1}.\]
+ Using this, we obtain from \eqref{eq1} and \eqref{eq2} that  $K(\dfrac{L}{c_{L}(L_{j+1})})<\dim L_{j}+\dim M_{j+1}=\dim 
+ L_{j+1}$ which completes  the inductive step. Now, since $c_{L}(L_{m})=c_{L}(F(L))=F(L)$, part $(i)$ of the theorem has been proved for the case $\Phi(L)=0$. 
+ \\
+ \indent
+ Suppose now that $\Phi(L)\neq 0$ and denote $L^{*}=\dfrac{L}{\Phi(L)}$. Since $F(L^{*})=\dfrac{F(L)}{\Phi(L)}$ we obtain that $\dfrac{L^{*}}{F(L^{*})}\cong \dfrac{L}{F(L)}$. Hence, by applying part $(i)$ to $L^{*}$ we obtain part $(i)$ for $L$. \\
+ \indent
+ It remains to prove part $(ii)$.  Since $\dim \dfrac{L}{L^{2}}\leq K(L)$ for  any Lie algebra $L$, part $(i)$ implies
+ \[\dim \dfrac{\frac{L}{F(L)}}{{(\frac{L}{F(L)})}^{2}}<\dim \dfrac{F(L)}{\Phi(L)}.\]
+ Thus 
+ \[2\dim F(L)>\dfrac{\dim L+\dim \Phi(L)}{\dim {(\frac{L}{F(L)})}^{2}}\]
+ and the result holds. 
+\end{proof}
+\begin{proposition}\label{pr4}
+Let $L\neq 0$ be a Lie algebra such that $F(L)=0$. Let $Res(L)$ denote the solvable residual of $L$. Then $\dim Res(L)>\dfrac{1}{2}\dim L$. 
+\end{proposition}
+\begin{lemma}\label{le5}
+If $L$ is a Lie algebra such that $\Phi(L)=0$ and $Z(L)\neq 0$, then $L=Z(L)\bigoplus H$, where $Z(H)=0$.
+\end{lemma}
+\begin{lemma}\label{le6}
+Let  $L$ be a Lie algebra, $N\unlhd L$ and $n\geq 0$. Then 
+\[\dfrac{L}{N}\sim_{n}\dfrac{L}{N\cap \gamma_{n+1}(L)}.\]
+\end{lemma}
+\begin{lemma}\label{le7}
+Let $L$ be a Lie algebra such that $\Phi(L)=0$. Then $Z(\dfrac{L}{Z(L)})=0$ and $\Phi(\dfrac{L}{Z(L)})=0$. 
+\end{lemma}
+\begin{theorem}\label{th8}
+Let $L$ be a non-abelian Lie algebra such that $\Phi(L)=0$. Then 
+\[\dim \dfrac{L}{Z(L)}<\dim L^{2}+\dim LN.\]
+\end{theorem}
+\begin{proof}
+(A.1) If $Z(L)=0$, then $F(L)\leq LN$ by Lemma \ref{le1}. Now we proceed with  the two cases. \\
+Case 1. $F=F(L)\neq 0$. Let 
+\[\dfrac{F_{0}}{F}=\Phi(\dfrac{L}{F}),\qquad  \dfrac{F_{1}}{F_{0}}=Z(\dfrac{L}{F_{0}})\]
+Noticing that $\Phi(\dfrac{L}{F_{0}})=0$, we  obtain by Lemma \ref{le2} that 
+\[Z(\dfrac{L}{F_{1}})=\Phi(\dfrac{L}{F_{1}})=0.\]
+Since $\dfrac{\frac{F_{1}}{F}}{\Phi(\frac{L}{F})}$ is abelian, we see $F_{1}$ is meta-nilpotent. Suppose firstly that $F_{1}=L$. Then $L$ is meta-nilpotent and $\dim F(L)+\dim(L^{2}+F(L))>\dim L$ by Lemma \ref{le3}. It follows  from $F(L)\leq LN$ that $\dim LN+\dim L^{2}>\dim L$, as required. Now, we assume  that $F_{1}<L$. Applying the inductive hypothesis to the factor Lie algebra $\dfrac{L}{F_{1}}$, we obtain that  
+\begin{equation}\label{eq(1)}
+\dim(\dfrac{L}{F_{1}})^{2}+\dim \dfrac{L}{F_{1}}\mathcal{N}>\dim \dfrac{L}{F_{1}}.
+\end{equation}
+On the other hand, $F_{1}$ is meta nilpotent, $\Phi(F_{1})=0$ and $F(L)=F(F_{1})$, then we deduce by  Lemma \ref{le3} that 
+\begin{equation}\label{eq(2)}
+\dim F+\dim (F_{1}^{2}+F)>\dim F_{1}.
+\end{equation}
+In addition, 
+\[\dim {(\dfrac{L}{F_{1}})}^{2}=\dim (\dfrac{L^{2}+F_{1}}{F_{1}})=\dim (\dfrac{L^{2}}{L^{2}\cap F_{1}})\]
+and
+\[\dim \dfrac{L}{F_{1}}\mathcal{N}=\dim(\frac{LN+F_{1}}{F_{1}})=\dim \dfrac{LN}{LN\cap F_{1}}.\]
+Also, it is clear that $F_{1}^{2}+F\leq L^{2}+F_{1}$ and $F_{1}N+F\leq LN\cap F_{1}$ by $F(L)\leq LN$. 
+Then
+\begin{align*}
+\dim L^{2}+\dim LN&\geq \dim {(\dfrac{L}{F_{1}})}^{2}+\dim (F_{1}^{2}+F)\\
+&\quad +\dim (\dfrac{L}{F_{1}})N+\dim (F_{1}N+F).
+\end{align*}
+It follows from \eqref{eq(1)} and \eqref{eq(2)} that 
+\[\dim L^{2}+\dim LN>\dim \dfrac{L}{F_{1}}+\dfrac{\dim F_{1}}{\dim F}+\dim (F_{1}N+F)\geq \dim L\]
+as required. \\
+Case 2. $F(L)=0$. Since $\dfrac{L}{LN}$ is nilpotent,
+\[Res(L)\leq LN\leq L^{2},\]
+where $Res(L)$ is the solvable residual of $L$. By Proposition \ref{pr4}
+\[\dim L^{2}+\dim LN\geq 2(\dim Res(L))>\dim L\]
+as required. 
+\\
+\indent
+If (A.2) $Z(L)\neq 0$, then by Lemma \ref{le5}, $L=Z(L)\bigoplus H$, where $Z(H)=0$. Thus $L^{2}=H^{2}$, $LN=HN$ and $\Phi(H)=0$. Now, $H$ satisfies $\Phi(H)=Z(H)=0$ by (A.1) above, we see $\dim H^{2}+\dim HN>\dim H$. Hence, 
+\begin{align*}
+\dim\dfrac{L}{Z(L)}&=\dim H<\dim H^{2}+\dim HN\\
+&=\dim L^{2}+\dim LN
+\end{align*}
+\end{proof}
+\begin{lemma}\label{le9}
+Let $L$ be a Lie algebra such that $\gamma_{n+1}(L)$ be finite dimensional. Let $M$ be an ideal of $L$. Then $LN$ is the smallest term in the lower central series of $L$ and so $\dfrac{L}{LN}$ is nilpotent. Moreover, $\dfrac{L}{M}N=\dfrac{LN+M}{M}$.
+\end{lemma}
+\begin{proof}
+Let $L$ be a Lie algebra such that $\gamma_{n+1}(L)$ be finite dimensional for some natural number $n$. Then the lower central series of $L$ terminates after a finite number of steps. Denote the smallest term in the lower central series of $L$ by $\gamma_{k}(L)$. Let $H$ be an arbitrary ideal of $L$ such that $\dfrac{L}{H}$ is nilpotent. Thus $\gamma_{i}(L)\subseteq H$ for some natural number $i$ and so $\gamma_{k}(L)\subseteq \gamma_{i}(L)\subseteq H$. It implies that $\gamma_{k}(L)\subseteq LN$. In addition, $\dfrac{L}{\gamma_{k}(L)}$ is nilpotent and hence $LN\subseteq \gamma_{k}(L)$. It follows that $LN=\gamma_{k}(L)$ is the smallest term in the lower central series of $L$. Now, $\gamma_{n+1}(\dfrac{L}{M})$ is finite dimensional, since $\gamma_{n+1}(\dfrac{L}{M})\cong \dfrac{\gamma_{n+1}(L)}{\gamma_{n+1}(L)\cap M}$ and $\gamma_{n+1}(L)$ is finite dimensional. 
+\\
+\indent
+Similarly,  $\dfrac{L}{M}N$ is the smallest term in the lower central series of $\dfrac{L}{M}$ and the result follows.
+\end{proof}
+\begin{lemma}\label{le10}
+Let $L$ and $H$ be two Lie algebras such that $L\sim_{n}H$ and $\gamma_{n+1}(L)$ be finite  dimensional. Then $\dim LN=\dim HN$.
+\end{lemma}
+\begin{proof}
+It follows from Lemma and this fact that $n$-isoclinism  induces an $(n+1)$-isoclinism.
+\end{proof}
+\begin{theorem}\label{th11}
+Let $L$ be a non-abelian Lie algebra such that $L^{2}\cap \Phi(L)=L^{2}\cap Z(L)$ and $\gamma_{2}(\dfrac{L}{Z(L)})$ is finite dimensional. Then, 
+\[\dim \dfrac{L}{Z_{2}(L)}<\dim \gamma_{2}(\dfrac{L}{Z(L)})+\dim \dfrac{L}{Z(L)}N\]
+\end{theorem}
+\begin{proof}
+Let $L$ be a Lie algebra such that $L^{2}\cap \Phi(L)=L^{2}\cap Z(L)$. Then $\dfrac{L}{\Phi(L)}\sim \dfrac{L}{Z(L)}$ by Lemma \ref{le6}. Put $\overline{L}=\dfrac{L}{\Phi(L)}$. It implies that $\gamma_{2}(\overline{L})\cong \gamma_{2}(\dfrac{L}{Z(L)})$ and $\dfrac{\overline{L}}{Z(\overline{L})}\cong \dfrac{\frac{L}{Z(L)}}{Z(\frac{L}{Z(L)})}\cong \dfrac{L}{Z_{2}(L)}$. Hence, $\gamma_{2}(\overline{L})$ is also finite dimensional and so, $\dfrac{\overline{L}}{Z_{2}(L)}$ is finite dimensional. Since $\Phi(L)=0$, we have $\overline{L}^{2}\cap Z(\overline{L})=0$. It implies that $Z(\dfrac{\overline{L}}{Z(\overline{L})})=0$ and $Z(\overline{L})=Z_{p}(\overline{L})$. 
+Lemma \ref{le7} yields $\Phi(\dfrac{\overline{L}}{Z(\overline{L})})=0$. It is sufficient that  we get the dimension of $\dfrac{\overline{L}}{Z(\overline{L})}$. Applying Theorem \ref{th8} for the  finite dimensional $\dfrac{\overline{L}}{Z(\overline{L})}$, we obtain 
+\begin{align*}
+\dim \dfrac{\overline{L}}{Z(\overline{L})}&<\dim \gamma_{2}(\dfrac{\overline{L}}{Z(\overline{L})})+\dim\dfrac{\overline{L}}{Z(\overline{L})}N\\
+&\leq \dim \gamma_{2}(\overline{L})+\dim \overline{L}N,
+\end{align*}
+because $Z(\dfrac{\overline{L}}{Z(\overline{L})})=0$, by Lemma \ref{le7}, and 
+\[\dim \dfrac{\overline{L}}{Z(\overline{L})}N=\dim \dfrac{\overline{L}N}{\overline{L}N\cap Z(\overline{L})}\leq \dim \overline{L}N,\]
+by Lemma \ref{le9}. Now, the isoclinism between $\overline{L}$ and $\dfrac{L}{Z(L)}$ implies that for each number natural  $k$, we have $\gamma_{k+1}(\dfrac{L}{Z(L)})\cong \gamma_{k+1}(\overline{L})$ since $\overline{L}\sim_{k}\dfrac{L}{Z(L)}$. Hence, $\dim \gamma_{2}(\overline{L})=\dim \gamma_{2}(\dfrac{L}{Z(L)})$ and $\dim\overline{L}N=\dim \dfrac{L}{Z(L)}N$, by Lemma \ref{le9} the result follows. 
+\end{proof}
+\begin{corollary}\label{co12}
+Let $L$ be an arbitrary non-abelian Lie algebra such that $\Phi(L)=0$ and $L^{2}$ be finite dimensional. Then 
+\[\dim \dfrac{L}{Z(L)}<\dim L^{2}+\dim LN.\]
+\end{corollary}
+\begin{proof}
+Let $\Phi(L)=0$. Then $Z_{2}(L)=Z(L)$, $\gamma_{2}(\dfrac{L}{Z(L)})\cong \gamma_{2}(L)$, $\dfrac{L}{Z(L)}N\cong LN$ and $L^{2}\cap \Phi(L)=L^{2}\cap Z(L)=0$, since $LN\cap Z(L)\subseteq L^{2}\cap Z(L)\subseteq \Phi(L)$. Apply Theorem \ref{th11} and the result follows. 
+\end{proof}
+\begin{lemma}\label{le13}
+Let $L$ be a Lie algebra and $N\unlhd L$. Then 
+\begin{enumerate}
+\item[(1)]
+If $N\cap Z(L)=0$, then $N\cap Z_{n}(L)=0$, for all $n\geq 1$.
+\item[(2)]
+If $N\cap \gamma_{n+1}(L)=0$ for some  $n\geq 1$, then $N\subseteq Z_{n}(L)$. 
+\end{enumerate}
+\end{lemma}
+If $L$ is any Lie algebra and $\alpha$ is an ordinal, then terms $Z_{\alpha}(L)$ of the upper central series of $L$ are defined by the usual rules $Z_{0}(L)=0$ and $\dfrac{Z_{\alpha+1}(L)}{Z_{\alpha}(L)}=Z(\dfrac{L}{Z_{\alpha}(L)})$ 
+together with the completeness condition 
+\[Z_{\lambda}(L)=\bigcup_{\alpha<\lambda}Z_{\alpha}(L)\]
+where $\lambda$ is a limit ordinal. Since the cardinality of $L$ can not  be exceeded there is an ordinal $\beta$ such that  $Z_{\beta}(L)=Z_{\beta+1}(L)=\ldots$ in which a terminal subalgebra is called the hypercenter of $L$. 
+\begin{theorem}\label{th14}
+Let $L$ be a Lie algebra such that $\gamma_{n+1}(L)\cap Z_{n}(L)=0$. Then $Z_{n}(L)$ is the hypercenter of $L$. 
+\end{theorem}
+\begin{proof}
+Let $\gamma_{n+1}(L)\cap Z_{n}(L)=0$. Then $\gamma_{n+1}(L)\cap Z(L)\subseteq \gamma_{n+1}(L)\cap Z_{n}(L)=0$. Since $\gamma_{n+1}(L)\cap Z(L)=0$, we have $\gamma_{n+1}(L)\cap Z_{n+i}(L)=0$ for each $i\geq 1$,  by part $(1)$ of Lemma \ref{le13}. Thus, $Z_{n+i}(L)\subseteq Z_{n}(L)$ for each $i\geq 1$, by part (2) of Lemma \ref{le13}. Hence $Z_{n}(L)$ is the hypercenter of $L$. 
+\end{proof}
+\begin{theorem}\label{th15}
+Let $L_{1}$ and $L_{2}$ be two Lie algebras such that $\gamma_{n+1}(L_{1})\cap Z_{n}(L_{1})
+=\gamma_{n+1}(L_{2})\cap Z_{n}(L_{2})=0$. 
+Then $L_{1}\sim_{n+1}L_{2}$ if and only if $L_{1}\sim_{n}L_{2}$.
+\end{theorem}
+\begin{proof}
+If $L_{1}\sim_{n+1}L_{2}$ then $\dfrac{L_{1}}{Z_{n+1}(L_{1})}\cong \dfrac{L_{2}}{Z_{n+1}(L_{2})}$ by an isomorphism $\alpha$. Thus $\dfrac{L_{1}}{Z_{n}(L_{1})}\cong \dfrac{L_{2}}{Z_{n}(L_{2})}$, by Theorem \ref{th14}. Hence $\alpha$ induces an isomorphism  from $\gamma_{n+1}(\dfrac{L_{1}}{Z_{n}(L_{1})})$ on to $\gamma_{n+1}(\dfrac{L_{2}}{Z_{n}(L_{2})})$ and so, $\gamma_{n+1}(L_{1})\cong \gamma_{n+1}(L_{2})$. The result follows.
+\end{proof}
+\begin{theorem}\label{th16}
+Let $L$ be a Lie algebra such that $\gamma_{n+1}(L)\cap Z_{n}(L)=0$, $H\leq L$ and $\gamma_{n+1}(L)$ be finite  dimensional. Then $L\sim_{n+1} H$ if and only if $L\sim_{n}H$.
+\end{theorem}
+\begin{proof}
+Since $\gamma_{n+1}(L)$ is finite dimensional so, $\dfrac{L}{Z_{2n}(L)}$ is finite dimensional. Since $Z_{n}(L)$ is the hypercenter of $L$, we have $Z_{2n}(L)=Z_{n+1}(L)=Z_{n}(L)$.  Hence, $\dfrac{L}{Z_{n+1}(L)}$ is finite dimensional. Let $L\sim_{n+1}H$. It implies $L=H+Z_{n+1}(L)=H+Z_{n}(L)$ and so  $L\sim_{n}H$. The result follows. 
+\end{proof}
+\begin{theorem}\label{th17}
+Let $L$ be a Lie algebra and let $n\geq 1$. Then there exists a Lie algebra $T$ such that $L\sim_{n}T$ and $Z(T)\cap \gamma_{n}(T)\leq \gamma_{n+1}(T)$. 
+\end{theorem}
+\begin{theorem}\label{th18}
+Let  $L$ be a Lie algebra such that $\gamma_{n+1}(L)\cap Z_{n}(L)=0$, then there exists a unique Lie algebra $S$ such taht $S\sim_{n} L$ and  $Z_{n}(S)=0$. In particular, $Z_{n}(S)\subseteq \gamma_{n+1}(S)$.
+\end{theorem}
+\begin{proof}
+Let $L$ be a Lie algebra such that $\gamma_{n+1}(L)\cap Z_{n}(L)=0$. There exists a Lie algebra $T_{1}$ such that  $L\sim_{n}T_{1}$ and $Z(T_{1})\cap \gamma_{n}(T_{1})\leq \gamma_{n+1}(T_{1})$ by Theorem \ref{th17}. Thus $Z(T_{1})\cap \gamma_{n}(T_{1})\leq \gamma_{n+1}(T_{1})\cap Z_{n}(T_{1})$. But, we have $\gamma_{n+1}(L)\cap Z_{n}(L)\cong \gamma_{n+1}(T_{1})\cap Z_{n}(T_{1})$, since $\gamma_{n+1}(L)\cap Z_{n}(L)$ is a family invariant for $n$-isoclinism classes.  Hence, $Z(T_{1})\cap \gamma_{n}(T_{1})=0$. By part $(1)$ of  Lemma \ref{le13}, we have $Z_{n}(T_{1})\cap \gamma_{n}(T_{1})=0$, and so $Z_{n}(T_{1})\subseteq Z_{n-1}(T_{1})$, by part $(2)$ of Lemma \ref{le13}. It implies that $Z_{n-1}(T_{1})\cap \gamma_{n}(T_{1})=0$. Again, there exists a Lie algebra $T_{2}$ such that $T_{1}\sim_{n-1}T_{2}$. We continue this process and we  conclude that there exists Lie algebra $T_{n-1}$ and $T_{n}$ such that  $T_{n-1}\sim_{1}T_{n}$ and $Z(T_{n})\cap T_{n}\subseteq \gamma_{2}(T_{n})$. Hence, $Z(T_{n})=Z(T_{n})\cap \gamma_{2}(T_{n})\cong Z(T_{n-1})\cap \gamma_{2}(T_{n-1})=0$. Put $T_{n}=S$ and so we have $Z_{n}(S)=0$. Now, let $S_{1}$ be another Lie algebra suh that $S_{1}\sim_{n}L$ and $Z_{n}(S_{1})\subseteq \gamma_{n+1}(S_{1})$. Hence $S\sim_{n}S_{1}$ and $Z_{n}(S_{1})\cap \gamma_{n+1}(S_{1})\cong Z_{n}(S)\cap \gamma_{n+1}(S)$. Thus, $Z_{n}(S_{1})\cong Z_{n}(S)=0$ and $S\cong S_{1}$. 
+\end{proof}
+\begin{theorem}\label{th19}
+Let $L$ be a Lie algebra  such that $\gamma_{n+1}(L)\cap Z_{n}(L)=0$ and $\gamma_{n+i}(L)$ is finite dimensional  for some positive integers $n$ and $i$. Then $\dfrac{L}{Z_{n}(L)}$ is finite dimensional. 
+\end{theorem}
+\begin{proof}
+If $\gamma_{n+i}(L)$ is finite dimensional for some positive integers  $n$ and $i$, then 
+$\dfrac{L}{Z_{2(n+i-1)}(L)}$ is finite dimensional. Theorem \ref{th14} implies that $Z_{2(n+i-1)}(L)=Z_{n}(L)$ and so the result follows. 
+\end{proof}
+\begin{theorem}\label{th20}
+Let $L$ and $H$ be two Lie algebras such that $L\sim_{n}H$, $\gamma_{n+1}(L)\cap Z_{n}(L)=0
+$ and $\gamma_{n+i}(L)$ be finite dimensional for some positive integers $i$. Then $\dfrac{H}{Z_{n}(H)}$ is finite dimensional. In particular, $H$ satisfies  the converse of  Baer's theorem.
+\end{theorem}
+\begin{proof}
+It follows from Theorem \ref{th19}.
+\end{proof}
+\begin{theorem}\label{th21}
+Let $L$ be a finite dimensional non abelian Lie algebra such that $\Phi(L)=0$. Then 
+\[\dim \dfrac{L}{Z(L)}<3\dim LN\]
+\end{theorem}
+\begin{proof}
+If $Z(L)=0$, then $F(L)\subseteq LN$ by Lemma \ref{le1}. Now, we proceed with the two case.\\
+(1) Assume that $F(L)=0$. Since $\dfrac{L}{LN}$ is nilpotent for the  finite domensional 
+Lie algebra $L$, we have $Res(L)\subseteq LN$. By Proposition \ref{pr4}, 
+\[\dim L<2\dim Res(L)\leq  2\dim LN.\]
+(2) Assume that $F(L)\neq 0$. We apply induction on $\dim L$. Put 
+\[\dfrac{F_{0}}{F}=\Phi(\dfrac{L}{F}),\qquad \dfrac{F_{1}}{F_{0}}=Z(\dfrac{L}{F_{0}})\]
+Noticing that $\Phi(\dfrac{L}{F_{0}})=0$, we have by Lemma \ref{le2} that $Z(\dfrac{L}{F_{1}})=\Phi(\dfrac{L}{F_{1}})=0$ since $\dfrac{\frac{F_{1}}{F}}{\Phi(\frac{L}{F})}$ is abelian, we see  $F_{1}$ is meta nilpotent. Suppose firstly that $F_{1}=L$. Then $L$ is  meta nilpotent and $\dim L<3\dim F(L)$. It follows from $F(L)\subseteq LN$ that $\dim L<3\dim LN$. Now, we assume that $F_{1}\subseteq L$. Applying the inductive  hypothesis to the factor Lie algebra $\dfrac{L}{F_{1}}$ we obtain that $\dim \dfrac{L}{F_{1}}<3\dim \dfrac{L}{F_{1}}N=\dfrac{3\dim LN}{3\dim (LN\cap F_{1})}$. On the other hand, $F_{1}$ is meta nilpotent, $\Phi(F_{1})=0$, and $F(L)=F(F_{1})$, then  we deduce 
+\[\dim F_{1}<3\dim F(F_{1})<3\dim (F_{1}\cap LN)\]
+Thus we can coclude that 
+\[\dim L <\dfrac{3\dim LN}{3\dim(LN\cap F_{1})+\dim F_{1}}\leq \frac{3\dim LN}{3\dim(LN\cap F_{1})}+3\dim (F_{1}\cap LN)\]
+and so $\dim L<3\dim LN$. If $Z(L)\neq 0$, then  $L=H\bigoplus Z(L)$. Now  $H$ satisfies $\Phi(H)=Z(H)=0$ and $HN=LN$. By the above part we see 
+\[\dim \dfrac{L}{Z(L)}=\dim H<3\dim HN=3\dim LN.\]
+\end{proof}
+\begin{theorem}\label{th22}
+Let $L$ be a Lie algebra. The following properties are  equivalent.
+\begin{enumerate}
+\item[(1)]
+The Lie algebra $\dfrac{L}{Z_{n}(L)}$ is finite.
+\item[(2)]
+The Lie algebra $L$ is $n$-isoclinic to a finite dimensional Lie algebra. 
+\end{enumerate}
+\end{theorem}
+\begin{theorem}\label{th23}
+Let $L$ be a Lie algebra such that $\Phi(L)\cap \gamma_{n+1}(L)=0$ and $\gamma_{n+1}(L)$ be finite dimensional for some natural number $n$. Then 
+\[\dim\dfrac{L}{Z_{n}(L)}\leq 3\dim \gamma_{n+1}(L).\]
+\end{theorem}
+\begin{proof}
+Let $L$ be a Lie algebra such that $\Phi(L)\cap \gamma_{n+1}(L)=0$. Then $Z_{n}(L)\cap \gamma_{n+1}(L)=0$, since $Z_{n}(L)\cap \gamma_{n+1}(L)\subseteq \Phi(L)\cap \gamma_{n+1}(L)$. Theorem \ref{th19} implies  that $\dfrac{L}{Z_{n}(L)}$ is finite dimensional. Hence there exists a finite dimensional Lie algebra $S$  such that $S\sim_{n}L$ and $Z_{n}(S)\cap \gamma_{n+1}(S)=0$ by Theorem \ref{th22}. Now, there is also a Lie algebra $S_{1}$ such that $Z_{n}(S_{1})=0$ and $S_{1}\sim_{n} S\sim_{n}L$ by Theorem \ref{th18}. Hence  $\dfrac{L}{Z_{n}(L)}\cong S_{1}$ and so $\Phi(\dfrac{L}{Z_{n}(L)})\cong \Phi(S_{1})$. We claim that $\Phi(\dfrac{L}{Z_{n}(L)})=0$. Since $\Phi(L)\cap \gamma_{n+1}(L)=0$ we have  $L\sim_{n}\dfrac{L}{\Phi(L)}$. Thus 
+$\dfrac{L}{Z_{n}(L)}\cong \dfrac{\frac{L}{\Phi(L)}}{Z_{n}(\frac{L}{\Phi(L)})}$. 
+But 
+$Z_{n}(\frac{L}{\Phi(L)})=Z(\dfrac{L}{\Phi(L)})$ since $\Phi(\dfrac{L}{\Phi(L)})=0$. Hence $\Phi(\dfrac{L}{Z_{n}(L)})\cong \Phi(\dfrac{\frac{L}{\Phi(L)}}{Z_{n}(\frac{L}{\Phi(L)})})=0$ we can deduce that 
+\begin{align*}
+\dim \dfrac{L}{Z_{n}(L)}=\dim S_{1}&<3\dim  S_{1}N\\
+&\leq 3\dim LN\\
+&\leq 3\dim \gamma_{n+1}(L).
+\end{align*}
+\end{proof}
+\begin{lemma}\label{le24}
+If $L$ is a meta nilpotent Lie algebra and $\overline{L}=\dfrac{L}{\Phi(L)}$, then 
+\[F(\overline{L})=\overline{L}N\bigoplus Z(\overline{L}).\]
+\end{lemma}
+\begin{proof}
+Since $\Phi(\overline{L})=0$, $F(\overline{L})$ is a direct sum of minimal ideals of $\overline{L}$. Let $\overline{N}$ be a minimal ideal of $\overline{L}$. If $[\overline{N},\overline{L}]=0$, then $\overline{N}\leq Z(\overline{L})$. If $[\overline{N},\overline{L}]=\overline{N}$ then $\overline{N}=[\overline{N},\overline{L},\ldots,\overline{L}]\leq [\overline{L},\ldots,\overline{L}]=K_{n}(\overline{L})$
+for any positive integers $n$ and therefore $\overline{N}\leq \overline{L}N$. It follows that $F(\overline{L})\leq \overline{L}N+Z(\overline{L})$. The nilpotency  of $LN$ implies $\overline{L}N+Z(\overline{L})=F(\overline{L})$. Noticing that $\overline{L} N\cap Z(\overline{L})\leq {(\overline{L})}^{2}\cap Z(\overline{L})\leq \Phi(\overline{L})=0$. We see $F(\overline{L})=\overline{L}N\bigoplus Z(\overline{L})$. 
+\end{proof}
+\begin{proposition}\label{po25}
+Let $L$ be a meta nilpotent Lie algebra. Then $\dim F(L)+\dim (L^{2}+\Phi(L))>\dim L+\dim \Phi(L)$. 
+\end{proposition}
+\begin{proof}
+If $\Phi(L)=Z(L)=0$, then  by Lemma \ref{le24}, $F(L)=LN\leq L^{2}$. It follows that $\dim F(L)+\dim L^{2}>\dim L$. If $\Phi(L)=0$ and $Z(L)\neq 0$ then by Lemma \ref{le5}, $L=Z(L)\bigoplus H$ where $Z(H)=0$.  Thus $L^{2}=H^{2}$, $LN=HN$ and $\Phi(H)=0$. Noticing that $H$ is meta nilpotent and $\Phi(H)=Z(H)=0$, we see  $\dim HN+\dim H^{2}>\dim H$ by the case above. Then 
+\[\dim Z(L)+\dim LN+\dim L^{2}>\dim Z(L)+\dim H=\dim L.\]
+It follows from Lemma \ref{le24} that $\dim F(L)+\dim L^{2}>\dim L$. If $\Phi(L)\neq 0$, then we consider the factor Lie algebra $\dfrac{L}{\Phi(L)}$, say $\overline{L}$. Again noticing that $\overline{L}$ is meta nilpotent and  $\Phi(\overline{L})=0$, we see $\dim F(\overline{L})+\dim {(\overline{L})}^{2}>\dim \overline{L}$ by the two cases above. Hence
+\[\dim \dfrac{F(L)}{\Phi(L)}+\dim (\dfrac{L^{2}+\Phi(L)}{\Phi(L)})>\dim \dfrac{L}{\Phi(L)}.\]
+\end{proof}
+\begin{lemma}\label{le26}
+Let $L$ be a Lie algebra such that $\Phi(L)\cap L^{2}=0$. Then $Z(L)$ is the hypercenter of $L$. Moreover, if $L^{2}$ is finite dimensional, then $\dfrac{L}{Z(L)}$ is finite dimensional.
+\end{lemma}
+\begin{proof}
+It is easy to see that $Z(L)\cap L^{2}=0$. Let $x\in Z_{2}(L)$. Then for each $l\in L$ we will have $[x,l]\in Z(L)\cap L^{2}$, and so $Z_{2}(L)=Z(L)$. Now, one can obtain the result by P. Hall's Theorem. 
+\end{proof}
+\begin{proposition}\label{pr27}
+Let $L$ be a Lie algebra such that $\Phi(L)\cap L^{2}=0$. Then $Z(L)$ is the  intersection of all maximal subalgebras of $L$ and  hence $\Phi(L)\subseteq Z(L)$. Moreover $Z(\dfrac{L}{Z(L)})=0$.
+\end{proposition}
+\begin{proof}
+Let $D$ be the intersection of all maximal subalgebras of $L$. It is clear that $D$ is an ideal of $L$ and every maximal subalgebra contains  $Z(L)$. Furthermore, $D\cap L^{2}\subseteq \Phi(L)\cap L^{2}$ because of $L^{2}\subseteq M$ for each maximal ideal $M$. Hence $D=Z(L)$. By Lemma \ref{le26}, we conclude that $Z(\dfrac{L}{Z(L)})=0$.
+\end{proof}
+\begin{theorem}\label{th28}
+Let $L$ be a nilpotent Lie algebra. Then 
+\begin{enumerate}
+\item[$(i)$]
+every subalgebra of $L$  is ideal.
+\item[$(ii)$]
+$L$ satisfies the idealizer condition.
+\item[$(iii)$]
+every maximal subalgebra of $L$ is ideal.
+\item[$(iv)$]
+$L^{2}=\Phi(L)$.
+\end{enumerate}
+\end{theorem}
+\begin{lemma}\label{le29}
+Let $L$ be a Lie algebra such that $L^{2}$ is nilpotent  and $\Phi(L)\cap L^{2}=0$. Then $L^{2}$ is abelian. In particular, if $L^{2}$ is finite dimensional, then $L^{2}$ is abelian.
+\end{lemma}
+\begin{proof}
+Theorem \ref{th28} $(iv)$ implies $L^{\prime\prime}=\Phi(L^{2})$. Therefore $L^{\prime\prime}$ is subalgebra of $\Phi(L)\cap L^{2}$ and hence $L^{2}$ is abelian. Now Let  $H$ be an arbitrary subalgebra of finite dimensional Lie algebra $L^{2}$. Since $L^{2}$ is abelian we have $H$ is an ideal and $\Phi(H)\subseteq \Phi(L)\cap L^{2}$. Therefore, $\Phi(H)=0$. 
+\end{proof}
+\begin{proposition}\label{pr30}
+Let $L$ be a finite dimensional Lie algebra such that $\Phi(L)\cap L^{2}=0$ and $L^{2}$ be a nilpotent Lie algebra. Then $L^{2}$ is the smallest term of the lower central series of $L$.
+\end{proposition}
+\begin{proof}
+By Lemma \ref{le29}, $L^{2}$ is a abelian Lie algebra. There exists a subalgebra $H$ in $L$ such that $L=H+L^{2}$ and $H\cap L^{2}=0$. On the other hand, we have $L=H+\gamma_{i+1}(L)$ for  all $i\geq 1$. Now, since $H\cap \gamma_{i+1}(L)=0$ for all $i\geq 1$, we will have $L^{2}=\gamma_{i+1}(L)$, as desirable. 
+\end{proof}
+\begin{theorem}\label{th31}
+Let  $L$ be a finite dimensional Lie algebra such that $\Phi(L)\cap L^{2}=0$ and $L^{2}$ be nilpotent. Then $L=H+L^{2}$, where $H\cap L^{2}=0$, $L^{2}$ is abelian and $H$ is abelian. Moreover, $H$ contains the  center of $L$. 
+\end{theorem}
+\begin{proof}
+By Lemma \ref{le29}, $L^{2}$ is abelian Lie algebra. As you see in the process of the proof of Proposition \ref{pr30} $L=H+L^{2}$ in which $H$ is  a subalgebra of $L$ and $H\cap L^{2}=0$. On the other hand $H^{2}$ is s subalgebra of $H\cap L^{2}$ and hence $H$ is abelian. Now suppose that $z\in Z(L)$. Then $z=h+l^{\prime}\in Z(L)$ for  some $l^{\prime}\in L^{2}$ and $h\in H$. Since $[h+l^{\prime},h_{1}]=0$ for all $h_{1}\in H$, we will have $l^{\prime}\in Z(L)$. Therefore $Z(L)\subseteq H$, because of $l^{\prime}\in L^{2}\cap Z(L)=0$. 
+\end{proof}
+\begin{theorem}\label{th32}
+Let $L$ and $H$ be two isoclinic  Lie algebras such that $\Phi(L)\cap L^{2}=0$. Then $Z(H)$ is the hypercenter of $H$, $\Phi(\dfrac{H}{Z(H)})$ is tivial and so $\Phi(H)\subseteq Z(H)$. Moreover, $\Phi(H)\cap H^{2}=0$ and 
+$\dfrac{L}{\Phi(L)}\sim \dfrac{H}{\Phi(H)}$.
+\end{theorem}
+\begin{proof}
+It is easy to see that if $N$ is an intersection of some maximal subalgebras of $L$, then $\Phi(\dfrac{L}{N})=0$. So, using Proposition \ref{pr27} we have $\Phi(\dfrac{L}{Z(L)})=0$. Since $L\sim H$ we have $\dfrac{L}{Z(L)}\cong \dfrac{H}{Z(H)}$ and $L^{2}\cap Z(L)\cong H^{2}\cap Z(H)$. Therefore $\Phi(\dfrac{H}{Z(H)})=0$ and we get $\Phi(H)\cap H^{2}=0$.
+\end{proof}
+\begin{theorem}\label{th33}
+Let $L$ be a Lie algebra such that $\Phi(L)\cap L^{2}=0$ and $L^{2}$ be finite  dimensional nilpotent. Then 
+\begin{enumerate}
+\item[$(i)$]
+$Z(L)$ is the intersection of all maximal subalgebras of $L$,
+\item[$(ii)$]
+$Z(L)$ is the hypercenter of $L$ and $\dfrac{L}{Z(L)}$ is finite dimensional and also $\Phi(\dfrac{L}{Z(L)})=0$,
+\item[$(iii)$]
+$L=H+L^{2}$ where $L^{2}$ is abelian, $H$ is abelian, $H\cap L^{2}=0$ and $Z(L)\subseteq H$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+$(i)$ The result follows from Proposition \ref{pr27}. \\
+$(ii)$
+The result follows from Lemma  and Lemma \ref{le26} and Theorem \ref{th32}. \\
+$(iii)$
+By part $(ii)$, we have $\dfrac{L}{Z(L)}$ is a finite Lie algebra with trivial Frattini Lie algebra and   ${(\dfrac{L}{Z(L)})}^{2}\cong L^{2}$. Also, Theorem \ref{th31} implies 
+\[\dfrac{L}{Z(L)}=\dfrac{H}{Z(L)}+\dfrac{L^{2}+Z(L)}{Z(L)}\]
+where $\dfrac{H}{Z(L)}\cap \dfrac{L^{2}+Z(L)}{Z(L)}=0$, $L^{2}$ is abelian and $\dfrac{H}{Z(L)}$ is abelian. But $\dfrac{H}{Z(L)}\cap \dfrac{L^{2}+Z(L)}{Z(L)}=\dfrac{(H\cap L^{2})+Z(L)}{Z(L)}=0$ and then $H\cap L^{2}\subseteq Z(L)\cap L^{2}=0$ and $H$ is abelian.
+\end{proof}
+\begin{theorem}\label{th34}
+Let $L$ be a non abelian Lie algebra such that $L^{2}$ is finite dimensional and  $\Phi(L)\cap L^{2}=0$. Then 
+\[\dim L^{2}\leq \dim \dfrac{L}{Z(L)}\leq \dim L^{2}+\dim LN.\]
+\end{theorem}
+\begin{proof}
+Proposition \ref{pr27} and Lemma \ref{le26} imply that $Z(\dfrac{L}{Z(L)})=\Phi(\dfrac{L}{Z(L)})=0$. Moreover, by Theorem \ref{th8} $\dim \dfrac{L}{Z(L)}<\dim L^{2}+\dim LN$. Also, there is simple lower bound for $\dim \dfrac{L}{Z(L)}$ in terms of $\dim L^{2}$, whenever $L^{2}\cap Z(L)=0$. In fact, we have $\dim L^{2}\leq \dim \dfrac{L}{Z(L)}$.  Furthermore, by Proposition \ref{pr30} we have $\dfrac{L}{Z(L)}N\cong LN=L^{2}$. Now by considering the finite dimensional Lie algebra $\dfrac{L}{Z(L)}$ in the above inequalities one  can obtain the result. 
+\end{proof}
+\begin{proposition}\label{pr35}
+Let $L\neq 0$ any Lie algebra such that $\Phi(L)=Z(L)=0$. Then $\dim L^{2}>\dfrac{1}{2}\dim L$.
+\end{proposition}
+\begin{proof}
+We apply induction on $\dim L$. We consider first case $F=F(L)\neq 0$. We put 
+\[\dfrac{F_{0}}{F}=\Phi(\dfrac{L}{F}),\qquad \dfrac{F_{1}}{F_{0}}=Z(\dfrac{L}{F_{0}})\]
+since $\Phi(\dfrac{L}{F_{0}})=0$, we obtain $Z(\dfrac{L}{F_{1}})=\Phi(\dfrac{L}{F_{1}})=0$. Now $F_{1}$ is meta nilpotent since $\dfrac{\frac{F_{1}}{F}}{\Phi(\frac{L}{F})}$ is abelian. Furthermore $F$ is abelian and $F=\bigoplus N_{i}$ where $N_{i}$ is minimal ideal in $L$. Since $Z(L)=0$ we have $N_{i}\leq L^{2}$ for each $i$ and so $F\leq L^{2}$. Suppose first that $F_{1}=L$. Then $L$ is meta nilpotent and Lemma \ref{le3} is applicable  to $L$. Thus $\dim F>\dfrac{\frac{1}{2}\dim L}{\frac{1}{2}\dim \frac{L^{2}}{F}}$ which implies 
+\[\dfrac{1}{2}\dim L^{2}+\dfrac{1}{2}\dim F>\dfrac{1}{2} \dim L.\]
+From $F\leq L^{2}$ it follows now that $\dim L^{2}>\dfrac{1}{2}\dim L$ as required.  Thus we may assume from now on that $F_{1}<L$. Applying the inductive hypothesis to the Lie algebra $\dfrac{L}{F_{1}}$, we obtain 
+\begin{equation}\label{eq(3)}
+\dim \dfrac{L^{2}}{L^{2}\cap F_{1}}=\dim \dfrac{L^{2}+F_{1}}{F_{1}}=\dim {(\dfrac{L}{F_{1}})}^{2}>\dfrac{1}{2}\dim \dfrac{L}{F_{1}}
+\end{equation}
+Also,
+\begin{align}
+\dim (L^{2}\cap F_{1})&\geq \dim (F_{1}^{2}+F)\label{eq(4)}\\
+&=\dim F+\dim (\dfrac{F_{1}^{2}+F}{F})\nonumber\\
+&=\dim F+\dim {(\dfrac{F_{1}}{F})}^{2}\nonumber
+\end{align}
+Now since $F=F(F_{1})$, $\Phi(F_{1})=0$ and $F_{1}$ is meta nilpotent we deduce by Lemma \ref{le3} that $\dim F>\dfrac{\frac{1}{2}\dim F_{1}}{\frac{1}{2}\dim {(\frac{F_{1}}{F})}^{2}}$. Combining this with \eqref{eq(4)} we have 
+\begin{align}
+\dim (L^{2}\cap F_{1})&>\dfrac{\frac{1}{2}\dim F_{1}}{\frac{1}{2}\dim {(\frac{F_{1}}{F})}^{2}}+\dim{(\frac{F_{1}}{F})}^{2}\nonumber\\
+&=\dfrac{1}{2}\dim F_{1}+\dfrac{1}{2}\dim {(\dfrac{F_{1}}{F})}^{2}\nonumber\\
+&\geq \dfrac{1}{2}\dim F_{1}.\label{eq(5)}
+\end{align}
+From \eqref{eq(3)} and \eqref{eq(5)}  follows now $\dim L^{2}>\dfrac{1}{2}\dim L$, as required. This completes  the inductive argument in the case $F(L)\neq 0$. 
+\end{proof}
+\begin{theorem}\label{th36}
+Let $L$ be any non abelian Lie algebra such that $\Phi(L)=0$. Then 
+\[\dim L^{2}>\dfrac{1}{2}\dim \dfrac{L}{Z(L)}\]
+\end{theorem}
+\begin{proof}
+Since $\Phi(L)=0$ the non trivial Lie algebra $\dfrac{L}{Z(L)}$ satisfies $\Phi(\dfrac{L}{Z(L)})=Z(\dfrac{L}{Z(L)})=0$. Hence by Proposition \ref{pr35} we have
+\[
+\dim {(\dfrac{L}{Z(L)})}^{2}>\dfrac{1}{2}\dim \dfrac{L}{Z(L)}.\]
+Since $\dim L^{2}\geq \dim \dfrac{L^{2}+Z(L)}{Z(L)}=\dim {(\dfrac{L}{Z(L)})}^{2}$. 
+\end{proof}
+

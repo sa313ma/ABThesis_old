@@ -1,0 +1,34 @@
+\contentsline {chapter}{فهرست مطالب}{آ}{section*.1}%
+\contentsline {chapter}{مقدمه}{ک}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}راهنماهای نصب}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}نصب تک‌لایو}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}نصب از روی منبع}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}نصب مستقیم با اینترنت}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}نصب غیرمستقیم با اینترنت}{3}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}تغییراتی که بایست برای استفاده از بیمر به صورت فارسی داده شود}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}راه‌اندازی xindy برای تولید نمایه}{5}{section.1.3}%
+\contentsline {chapter}{\numberline {2}ریاضی‌نویسی با نگاهی بر بسته AMS}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}بسته‌ها}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}محیط‌های ریاضی}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}شکل}{16}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}جدول}{19}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}بسته‌های کاربردی}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}دیاگرام}{25}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}بسته \text {xy}}{25}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}رسم فلوچارت با \text {tikz}}{26}{section.3.2}%
+\contentsline {section}{\numberline {3.3}کدهای برنامه‌نویسی}{26}{section.3.3}%
+\contentsline {section}{\numberline {3.4}رسم نمودار}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}رسم نمودارهای قطبی}{28}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}نمودارهای دکارتی با استفاده از بسته tikz}{28}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}رسم گراف}{34}{section.3.5}%
+\contentsline {section}{\numberline {3.6}الگوریتم}{34}{section.3.6}%
+\contentsline {section}{\numberline {3.7}جدول}{36}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}بسته array}{46}{subsection.3.7.1}%
+\contentsline {chapter}{\numberline {4}صفحات پایانی}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}واژه‌نامه با زیندی}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}مراجع}{48}{section.4.2}%
+\contentsline {chapter}{\numberline {آ}برنامه‌های کاربردی}{51}{appendix.Alph1}%
+\contentsline {chapter}{مراجع}{53}{section*.13}%
+\contentsline {chapter}{واژه‌نامه فارسی به انگلیسی}{54}{section*.15}%
+\contentsline {chapter}{واژه‌نامه انگلیسی به فارسی}{57}{section*.32}%
+\contentsline {chapter}{نمایه}{61}{section*.43}%

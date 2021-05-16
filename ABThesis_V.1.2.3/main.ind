@@ -1,0 +1,85 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroup{ا}
+  \item اشتراک زمانی, \hyperpage{48}
+  \item افزونگی, \hyperpage{48}
+  \item انجمن ریاضی آمریکا (AMS), \hyperpage{7}
+
+  \indexspace
+
+  \lettergroup{ب}
+  \item باند‌پایه, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{پ}
+  \item پهنای باند, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ج}
+  \item جایگشت, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{خ}
+  \item خدمت, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{د}
+  \item درهم‌ساختن, \hyperpage{48}
+  \item درهم‌ساز, \hyperpage{48}
+  \item دسترسی چندگانه, \hyperpage{48}
+  \item دودویی, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ز}
+  \item زمان‌بندی, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ش}
+  \item شیار زمانی, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ف}
+  \item فراگردی, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ک}
+  \item کددرهم‌ساز, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{گ}
+  \item گذردهی, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ن}
+  \item نمونه, \hyperpage{48}
+  \item نمونه‌برداری, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{و}
+  \item واگذاری, \hyperpage{48}
+
+  \indexspace
+
+  \lettergroup{ه}
+  \item هزینه, \hyperpage{48}
+  \item همتافتگر, \hyperpage{47}
+  \item همتافتگری, \hyperpage{48}
+  \item همتافتن, \hyperpage{47}
+
+\end{theindex}

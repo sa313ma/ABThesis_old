@@ -1,0 +1,72 @@
+;; This logfile was generated automatically by `xindy'
+;; at 13.03.2021  07:52:56
+;; Indexstyle: "D:\\TexFiles\\ABThesis_V.1.2.2\\9WzyQcKJmv", Rawindex: "D:\\TexFiles\\ABThesis_V.1.2.2\\R_NLoEkNaA", Output: "main.gls"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+Letter-group: "¢®¦³ª¤¢¯ ®¦µ¦°³°­°¨ª¤¢­ ´°¤ª¦µº" -> "A"
+Letter-group: "®¶­µª±­¦¹" -> "M"
+Letter-group: "®¶­µª±­¦¹¦³" -> "M"
+Letter-group: "®¶­µª±­¦¹ª¯¨" -> "M"
+Letter-group: "£ª¯¢³º" -> "B"
+Letter-group: "£¢´¦ £¢¯¥" -> "B"
+Letter-group: "£¢¯¥¸ª¥µ©" -> "B"
+Letter-group: "´¦³·ª¤¦" -> "S"
+Letter-group: "´³¢®£­ª¯¨ ¤°¥¦" -> "S"
+Letter-group: "´¤³¢®£­¦³" -> "S"
+Letter-group: "´¤³¢®£­¦" -> "S"
+Letter-group: "´¢®±­ª¯¨" -> "S"
+Letter-group: "´¢®±­¦" -> "S"
+Letter-group: "µª®ª¯¨" -> "T"
+Letter-group: "µª®¦ ´©¢³ª¯¨" -> "T"
+Letter-group: "µ©³°¶¨©±¶µ" -> "T"
+Letter-group: "µª®¦ ´­°µ" -> "T"
+Letter-group: "³¦¥¶¯¥¢¯¤º" -> "R"
+Letter-group: "¤©¢³¨ª¯¨" -> "C"
+Letter-group: "©¢¯¥°§§" -> "H"
+Letter-group: "©¢¯¥°·¦³" -> "H"
+Letter-group: "³°¢®ª¯¨" -> "R"
+Letter-group: "®¶­µª±­¦ ¢¤¤¦´´" -> "M"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "¢®¦³ª¤¢¯ ®¦µ¦°³°­°¨ª¤¢­ ´°¤ª¦µº" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "£¢¯¥¸ª¥µ©" -> "B"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "¤©¢³¨ª¯¨" -> "C"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "©¢¯¥°§§" -> "H"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "®¶­µª±­¦ ¢¤¤¦´´" -> "M"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "³¦¥¶¯¥¢¯¤º" -> "R"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "´¢®±­¦" -> "S"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "µ©³°¶¨©±¶µ" -> "T"

@@ -1,0 +1,353 @@
+@book{e,
+  title={Real and complex analysis},
+  author={Rudin, Walter},
+  year={2006},
+  publisher={Tata McGraw-hill education}
+}‎‎
+‎
+@ARTICLE{1‎,
+  ‎AUTHOR =  {واحدی, مصطفی},
+  ‎TITLE =  {موضوعی جدید در هندسه محاسباتی},
+  ‎JOURNAL =  {مجله فارسی نمونه},
+  ‎VOLUME =  {1}‎,
+  ‎YEAR =  {1387}‎,
+  ‎NUMBER =  {2}‎,
+  ‎MONTH =  {آبان},
+  ‎PAGES =  {22-30}‎,
+  ‎LANGUAGE =   {Persian}‎
+}
+
+‎@BOOK{2‎,
+  ‎AUTHOR =       {استالینگ, ویلیام},
+  ‎EDITOR =       {برنجکوب, محمود},
+  ‎translator =‎   { صدیقی‌ مشکنانی, محسن ‎and‎ پدرام,حسین ‎}‎,
+  ‎TITLE =        {اصول طراحی و ویژگیهای داخلی سیستم‌های عامل},
+  ‎PUBLISHER =    {نشر شیخ بهایی},
+  ‎YEAR =         {۱۳۸۰}‎,
+  ‎ADDRESS =      {اصفهان},
+  ‎edition =      {سوم},
+  ‎MONTH =        {بهار},
+  ‎LANGUAGE =     {Persian}‎
+}
+
+‎@CONFERENCE{3‎,
+  ‎AUTHOR =       {امین‌طوسی,محمود ‎and‎ مزینی,ناصر ‎and‎  فتحی,محمود},
+  ‎TITLE =        {افزایش وضوح ناحیه‌ای},
+  ‎BOOKTITLE =    {چهاردهمین کنفرانس ملی سالانه انجمن کامپیوتر ایران},
+  ‎YEAR =         {1387}‎,
+  ‎ORGANIZATION = {دانشگاه امیرکبیر},
+  ‎ADDRESS =      {تهران، ایران},
+  ‎month =‎ 		 {اسفند},
+  ‎pages = {101--108}‎,
+  ‎LANGUAGE =     {Persian}‎,  
+  ‎url = {http://www.civilica.com/Paper-ACCSI14-ACCSI14_107.htm}‎
+}
+
+
+‎@MASTERSTHESIS{4‎,
+  ‎AUTHOR =       {پورموسی , امیرمسعود},
+  ‎TITLE =        {یک موضوع فیزیک},
+  ‎SCHOOL =       {دانشکده فیزیک، دانشگاه صنعتی‌شریف},
+  ‎YEAR =         {۱۳۸۸}‎,
+  ‎MONTH =        {مرداد},
+  ‎NOTE =‎ 		 {(در حال انجام)},
+  ‎LANGUAGE =     {Persian}‎
+}
+
+
+
+
+‎@PHDTHESIS{5‎,
+  ‎AUTHOR =       {امیدعلی, مهدی},
+  ‎TITLE =        {تابع هیلبرت},
+  ‎SCHOOL =       {دانشکده ریاضی، دانشگاه امیرکبیر},
+  ‎YEAR =         {1382}‎,
+  ‎MONTH =        {تیر},
+  ‎LANGUAGE =     {Persian}‎
+}
+
+
+
+
+‎@MISC{6‎,
+  ‎AUTHOR =      {خلیقی,وفا},
+  ‎TITLE =        {زی‌پرشین ‎(\lr{\XePersian})‎: بسته فارسی برای حروف‌چینی در ‎\lr{\LaTeX2e}}‎,
+  ‎HOWPUBLISHED =    {\lr{\href{HTTP://BITBUCKET.ORG/VAFA/XEPERSIAN}{HTTP://BITBUCKET.ORG/VAFA/XEPERSIAN}}}‎,
+  ‎YEAR =         {۱۳۸۷}‎,
+  ‎LANGUAGE =     {Persian}‎
+  }
+
+
+‎@ARTICLE{7‎,
+  ‎AUTHOR =       {M‎. ‎Amintoosi and M‎. ‎Fathy and N‎. ‎Mozayani}‎,
+  ‎authorfa =     {م. امین‌طوسی ‎and‎ م. فتحی ‎and‎ م.مزینی},
+  ‎TITLE =        {Precise Image Registration with Structural Similarity Error Measurement Applied to Super-Resolution}‎,
+  ‎JOURNAL =      {{EURASIP} {J}ournal on {A}pplied {S}ignal {P}rocessing}‎,
+ ‎Volume =         {2009}‎,
+  ‎YEAR =         {2009}‎,
+  ‎pages =        {7 pages}‎,
+  ‎note =         {{A}rticle ID 305479}‎,
+ ‎url = {http://www.hindawi.com/journals/asp/2009/305479.html}‎
+}
+
+‎@article{8‎,
+ ‎author = {Baker,‎, ‎Simon and Kanade,‎, ‎Takeo}‎,
+ ‎authorfa = {ر. گنزالس ‎and‎ ر. وودس ‎}‎,
+ ‎title = {Limits on Super-Resolution and How to Break Them}‎,
+ ‎journal = {IEEE Trans‎. ‎Pattern Anal‎. ‎Mach‎. ‎Intell.}‎,
+ ‎volume = {24}‎,
+ ‎number = {9}‎,
+ ‎year = {2002}‎,
+ ‎issn = {0162-8828}‎,
+ ‎pages = {1167--1183}‎,
+ ‎publisher = {IEEE Computer Society}‎,
+ ‎address = {Washington‎, ‎DC‎, ‎USA}‎
+ }
+ 
+ ‎@BOOK{9‎,
+  ‎AUTHOR =      {Gonzalez,‎, ‎Rafael C‎. ‎and Woods,‎, ‎Richard E.}‎,
+  ‎authorfa = {ر. گنزالس ‎and‎ ر. وودس ‎}‎,
+  ‎TITLE =       {Digital Image Processing}‎,
+  ‎PUBLISHER =   {Prentice-Hall‎, ‎Inc.}‎,
+  ‎YEAR =        {2006}‎,
+  ‎ISBN =‎ 	‎	{013168728X},‎
+  ‎EDITION = 	{3rd}‎,
+  ‎ADDRESS = {Upper Saddle River‎, ‎NJ‎, ‎USA}‎,
+}
+
+‎@CONFERENCE{10‎,
+  ‎author =       {M‎. ‎Amintoosi and M‎. ‎Fathy and N‎. ‎Mozayani}‎,
+  ‎authorfa =     {م. امین‌طوسی ‎and‎ م. فتحی ‎and‎ م.مزینی},
+  ‎title =        {Regional Varying Image Super-Resolution}‎,
+  ‎booktitle =    {IEEE International Joint Conference on Computational Sciences and Optimization}‎,
+  ‎year =         {2009}‎,
+  ‎month =        {April 23-26}‎,
+  ‎address =      {Sanya‎, ‎China}‎,
+  ‎volume =       {1}‎,
+  ‎pages =        {913-917}‎
+}
+
+
+
+ 
+‎@MASTERSTHESIS{11‎,
+  ‎AUTHOR =       {Vafa Khalighi}‎,
+ ‎AUTHORFA = {خلیقی,وفا},
+  ‎TITLE =        {Category Theory}‎,
+  ‎SCHOOL =       {Sydny Univ.}‎,
+  ‎YEAR =         {2007}‎,
+  ‎MONTH =        {April}‎
+}
+
+
+
+‎@PhdThesis{12‎,
+  ‎author =   {Sean Borman}‎,
+  ‎authorfa = {بورمن,سین},
+  ‎title =    {Topics in Multiframe Superresolution Restoration}‎,
+  ‎school =   {University of Notre Dame}‎,
+  ‎year =     {2004}‎,
+  ‎address =  {Notre Dame‎, ‎IN}‎,
+  ‎month =    may‎,
+}
+
+
+
+
+‎@PROCEEDINGS {13‎,
+ ‎editor    = {Farhad Shokoohi}‎,
+ ‎authorfa = {فرهاد شکوهی},
+ ‎title     = {Proceedings of the Xth Conference on XYZ}‎,
+ ‎booktitle = {Proceedings of the Xth Conference on XYZ}‎,
+ ‎year      = {2006}‎,
+ ‎month     = {October}‎
+}
+
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎
+‎@article{x1,
+author = {Abril, Patricia S. and Plant, Robert},
+title = {The Patent Holder's Dilemma: Buy, Sell, or Troll?},
+journal = {Commun. ACM},
+issue_date = {January 2007},
+volume = {50},
+number = {1},
+month = jan,
+year = {2007},
+issn = {0001-0782},
+pages = {36--44},
+numpages = {9},
+url = {https://doi.org/10.1145/1188913.1188915},
+doi = {10.1145/1188913.1188915},
+acmid = {1188915},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+@article{x2,
+author = {Cohen, Sara and Nutt, Werner and Sagiv, Yehoshua},
+title = {Deciding Equivalences Among Conjunctive Aggregate Queries},
+journal = {J. ACM},
+issue_date = {April 2007},
+volume = {54},
+number = {2},
+month = apr,
+year = {2007},
+issn = {0004-5411},
+articleno = {5},
+url = {https://doi.org/10.1145/1219092.1219093},
+doi = {10.1145/1219092.1219093},
+acmid = {1219093},
+publisher = {ACM},
+address = {New York, NY, USA},
+keywords = {Aggregation, Datalog, bag-set semantics, query equivalence},‎
+}
+‎
+@book{x16,
+author = {Kosiur, Dave},
+title = {Understanding Policy-based Networking},
+year = {2001},
+isbn = {0-471-38804-1},
+publisher = {John Wiley \& Sons, Inc.}, address = {New York, NY, USA},
+}
+‎
+@book{x3,
+editor = {Oviatt, Sharon and Schuller, Bj\"{o}rn and Cohen, Philip R. and Sonntag, Daniel and Potamianos, Gerasimos and Kr\"{u}ger, Antonio},
+title = {The Handbook of Multimodal-Multisensor Interfaces: Foundations, User Modeling, and Common Modality Combinations},
+year = {2017},
+isbn = {978-1-97000-167-9},
+publisher = {Association for Computing Machinery and Morgan \&\#38; Claypool},
+address = {New York, NY, USA},
+}
+@book{x4, author = {Knuth, Donald E.},
+title = {The Art of Computer Programming: Fascicles 0-4},
+year = {2009}, isbn = {0321637135}, edition = {1st},
+Volume = {4}, publisher = {Addison-Wesley Professional},
+}
+@inproceedings{x5,
+author = {Andler, Sten},
+title = {Predicate Path Expressions},
+booktitle = {Proceedings of the 6th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages},
+series = {POPL '79},
+year = {1979},
+location = {San Antonio, Texas},
+pages = {226--236},
+numpages = {11},
+url = {https://doi.org/10.1145/567752.567774},
+doi = {10.1145/567752.567774},
+acmid = {567774},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+@misc{x6,
+author ={Joseph Scientist},
+year ={2009},
+title ={The fountain of youth},
+note ={Patent No. 12345, Filed July 1st., 2008, Issued Aug. 9th., 2009},
+url ={},
+month ={aug},
+lastaccessed = {},
+}
+@techreport{x7,
+author = {Harel, D.},
+title = {LOGICS OF PROGRAMS: AXIOMATICS AND DESCRIPTIVE POWER}, year = {1978},
+source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Amitai%3AMIT-LCS%2F%2FMIT%2FLCS%2FTR-200},
+publisher = {Massachusetts Institute of Technology},
+address = {Cambridge, MA, USA},
+}
+@phdthesis{x8,
+author = {Clarkson, Kenneth Lee}, advisor = {Yao, Andrew C.},
+title = {Algorithms for Closest-point Problems (Computational Geometry)},
+year = {1985},
+note = {AAT 8506171},
+publisher = {Stanford University},
+address = {Stanford, CA, USA},
+}
+@mastersthesis{x9,
+author = {Bruwer, Frederick Johannes},
+title = {Digital Modem with Combined Convolutional Coding and Modulation for Speech Band Data Communication. (Afrikaans Text)},
+year = {1986},
+note = {AAI0662099},
+}
+
+@online{x10,
+author ={Harry Thornburg},
+year = {2001},
+title ={Introduction to Bayesian Statistics},
+url ={http://ccrma.stanford.edu/~jos/bayes/bayes.html},
+month ={mar},
+lastaccessed ={March 2, 2005},
+}
+@misc{x11,
+author = {ACM},
+title = {Association for Computing Machinery: Advancing Computing as a Science & Profession},
+url = {http://www.acm.org/}
+}
+@misc{x12,
+author = {Wikipedia},
+title = {{W}ikipedia{,} The Free Encyclopedia},
+year = {2017},
+url = {https://www.wikipedia.org/}
+}
+@inproceedings{x13,
+note = {Director-Novak, Dave},
+title = {Solder Man},
+booktitle = {ACM SIGGRAPH 2003 Video Review on Animation Theater Program: Part 1 - Volume 145},
+series = {SVR '03},
+year = {2003},
+pages = {4--},
+url = {https://doi.org/10.1145/1006091.1006096},
+doi = {10.1145/1006091.1006096},
+acmid = {1006096},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+@misc{x14,
+author= {Barack Obama},
+year= {2008},
+title = {A more perfect union},
+url= {http://video.google.com/videoplay?docid=6528042696351994555},
+month = {mar},
+lastaccessed = {March 21, 2008},
+note = {},
+}
+@article{x15,
+Author = {Martin Beneke and Gerhard Buchalla and Isard Dunietz},
+Title = {Mixing-induced CP Asymmetries in Inclusive $B$ Decays},
+Year = {1996},
+Eprint = {arXiv:hep-ph/9609357},
+doi = {10.1016/S0370-2693(96)01648-6},
+}
+‎
+
